@@ -26,7 +26,7 @@ information associated to a dataset.
 The CatalogManager provides a common view and a common set of APIs for
 operating on datasets and on all related metadata information and
 schemas (see the `CatalogManager API &
-endpoints <api_catalogManager.md>`__).
+endpoints <api_catalogManager.html>`__).
 
 The CatalogManager is based on the services provided by the
 `CKAN <https://ckan.org/>`__ service. In fact, one of the most relevant
@@ -52,7 +52,7 @@ the proper metadata to the ingested data.
 
 The IngestionManager provides an API to ingest data from a datasource
 into the DAF platfom (see the `IngestionManager API &
-endpoints <api_ingestionManager.md>`__). In particular, the
+endpoints <api_ingestionManager.html>`__). In particular, the
 IngestionManager takes as input data and info needed to identify the
 dataset to which the data needs to be associated with. Before actually
 storing the data in DAF, the IngestionManager performs a set of
@@ -78,7 +78,7 @@ StorageManager
 
 The *StorageManager* is responsible for abstracting the physical medium
 where the data is actually stored (see the `StorageManager API &
-endpoints <api_storagemanager.md>`__).
+endpoints <api_storagemanager.html>`__).
 
 The StorageManager is based on the Spark dataset abstraction for hiding
 the details of the specific storage platform. In fact, Spark provides a
@@ -110,7 +110,7 @@ such as:
 
 For a list of endpoints and functionalities currently provided by the
 DatasetManager see the `DatasetManager API &
-endpoints <api_datasetManager.md>`__.
+endpoints <api_datasetManager.html>`__.
 
 Technically speaking, the DatasetManager is responsible for all the
 tasks on top of the datasets, indicated by the `logical
