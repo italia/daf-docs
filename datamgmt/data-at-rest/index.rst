@@ -37,11 +37,11 @@ Standard Dataset Directory Structure
 
 All Standard datasets are stored in the following HDFS directory:
 
-``/ daf / standard /``
+``/daf/standard/``
 
 The content of this directory is organized adopting the following rules:
 
-``domain / subdomain / datasetName.datasetFormat / sourceOrg /``
+``domain/subdomain/datasetName.datasetFormat/sourceOrg/``
 
 where:
 
@@ -60,11 +60,11 @@ Ordinary Dataset Directory Structure
 
 All Ordinary datasets are stored in the following HDFS directory:
 
-``/ daf / ordinary /``
+``/daf/ordinary/``
 
 The content of this directory is organized adopting the following rules:
 
-``sourceOrg / domain / subdomain / datasetName.stage.datasetFormat /``
+``sourceOrg/domain/subdomain/datasetName.stage.datasetFormat/``
 
 where:
 
@@ -85,9 +85,9 @@ Raw Dataset Directory Structure
 
 All Raw datasets are stored in the following HDFS directory:
 
-``/ daf / raw /``
+``/daf/raw/``
 
 The content of this directory is organized adopting the same naming
 convention used for Ordinary datasets, that is:
 
-``sourceOrg / domain / subdomain / datasetName.stage.datasetFormat /``
+``sourceOrg/domain/subdomain/datasetName.stage.datasetFormat/``
