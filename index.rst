@@ -11,7 +11,10 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-
+    introduction/
+    datamgmt/
+    architecture/
+    
 Data & Analytics Framework (DAF) - Developer Documentation
 ==========================================================
 
