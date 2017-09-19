@@ -11,8 +11,8 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-    Introduction <introduction>
-    Data Management <datamgmt/>
+    Introduction <introduction/index>
+    Data Management <datamgmt/index>
     Architecture <architecture/index>
     
 Data & Analytics Framework (DAF) - Developer Documentation
