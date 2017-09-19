@@ -12,8 +12,8 @@ Contents:
    :maxdepth: 2
 
     Introduction <introduction>
-    datamgmt <datamgmt>
-    architecture
+    Data Management <datamgmt/>
+    Architecture <architecture/>
     
 Data & Analytics Framework (DAF) - Developer Documentation
 ==========================================================
