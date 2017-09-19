@@ -1,6 +1,14 @@
 DAF Architecture
 ================
 
+.. toctree::
+   :hidden:
+   :maxdepth: 2
+
+    Logical View <logicalView/index>
+    Component/𝜇-service View <componentView/index>
+    Deployment View <deploymentView/index>
+
 The DAF (Data Analytics Framework) is a platform originally designed to
 gather and store data coming from different Italian public
 administrations. As a consequence, it provides efficient and easy to use

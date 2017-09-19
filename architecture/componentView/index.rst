@@ -1,6 +1,16 @@
 Component/𝜇-Service View
 ========================
 
+
+
+.. toctree::
+   :maxdepth: 2
+
+    CatalogManager <api_catalogManager>
+    IngestionManager <api_ingestionManager>
+    StorageManager <api_storagemanager>
+    DatasetManager <api_datasetManager>
+
 The main components/𝜇-services of the DAF platform are:
 
 -  `CatalogManager <#CatalogManager>`__
