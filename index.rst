@@ -13,7 +13,7 @@ Contents:
 
     Introduction <introduction>
     Data Management <datamgmt/>
-    Architecture <architecture/>
+    Architecture <architecture/index>
     
 Data & Analytics Framework (DAF) - Developer Documentation
 ==========================================================
