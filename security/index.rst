@@ -58,16 +58,17 @@ The access rights are only two: READ and WRITE, these rights as said
 before have to be mapped on proper HDFS ACLs and Sentry roles and
 grants.
 
-### Security Rules and mapping on HDFS and Sentry
+Security Rules and mapping on HDFS and Sentry
+~~~~~~~~~~~~~~
 
 Let's start with ordinary data first. So, we know that the ordinary data
 HDFS layout is defined in the following way:
 
-``/ daf / ordinary /``
+``/daf/ordinary/``
 
 The content of this directory is organized adopting the following rules:
 
-``sourceOrg / domain / subdomain / datasetName.stage.datasetFormat /``
+``sourceOrg/domain/subdomain/datasetName.stage.datasetFormat``
 
 where:
 
