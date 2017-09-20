@@ -1,6 +1,21 @@
-DAF - Data Management Architecture
+Data Management Architecture
 ==================================
 
+
+.. toctree::
+  :maxdepth: 2
+  :hidden:
+  
+  dataset
+  dataset-metadata-schemas
+  dataset-adding
+  data-ingestion
+  data-at-rest
+  data-in-use
+  data-insights-publication
+
+    
+    
 We introduce the philosophy behind the data management architecture of
 the DAF platform describing the following topics:
 

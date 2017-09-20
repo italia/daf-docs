@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Data & Analytics Framework - DAF's documentation!
+Data & Analytics Framework (DAF) - Developer Documentation
 ============================================================
 
 Contents:
@@ -12,19 +12,12 @@ Contents:
    :maxdepth: 2
 
     Introduction <introduction/index>
+    Cluster set-up <clusterSetup>
     Data Management <datamgmt/index>
     Architecture <architecture/index>
+    DAF Technologies Ecosystem <ecosystem/index>
+    Security & Privacy issues <security/index>
     
-Data & Analytics Framework (DAF) - Developer Documentation
-==========================================================
-
--  `Introduction <introduction>`__
--  `Multinode cluster set-up <clusterSetup>`__ - **coming soon**
--  `Data Management <datamgmt>`__
--  `Architectural overview <architecture>`__
--  `DAF Technologies Ecosystem <ecosystem>`__ - **coming soon**
--  `Security & Privacy issues <security>`__ - **coming soon**
-
    
 .. 
 .. Indices and tables
