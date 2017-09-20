@@ -19,12 +19,3 @@ Contents:
     Security & Privacy issues <security/index>
     
    
-.. 
-.. Indices and tables
-.. ==================
-.. 
-.. * :ref:`genindex`
-.. * :ref:`modindex`
-.. * :ref:`search`
-.. 
-
