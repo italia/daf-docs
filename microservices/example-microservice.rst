@@ -3,12 +3,17 @@ This is an example microservice
 ============================================================
 
 
-Section 1
+What is?
 ----------
 
 ...
 
-Section 2
+Install
+----------
+
+...
+
+Setup
 ----------
 
 ...
