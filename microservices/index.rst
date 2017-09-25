@@ -8,5 +8,5 @@ Contents:
    :maxdepth: 2
 
     Example Microservice <example-microservice>
-    Catalog Manager     catalog-manager    
+    Catalog Manager     <catalog-manager>    
    
