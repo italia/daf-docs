@@ -1,5 +1,5 @@
  
-Docker recipies od Open source tools used in DAF
+Docker recipies of open source tools used in DAF
 =================================================
 
 Contents:
