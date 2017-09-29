@@ -23,7 +23,7 @@ Install
 
 The basic functionalities of the security manager needs an installation of freeIPA server whitch acts as credentials store and user authentication system.
 
-In the next section single rest services are detailed. To test the endpoints I suggest to use a tool similar to `Postman <https://www.getpostman.com/>`_. Url's listed refers to the attacched Postman configuration.
+In the next section single rest services are detailed. To test the endpoints I suggest to use a tool similar to `Postman <https://www.getpostman.com/>`_. Url's listed refers to the `this <https://github.com/acherici/daf-docs/blob/master/microservices/Security-Manager.postman.json>`_ Postman configuration.
 
 
 Endpoints
@@ -48,12 +48,3 @@ Register a user to the system (create the credential)
 
 
 
-Section 3
-----------
-
-...
-
-
-
-
-doduce 
