@@ -1,0 +1,108 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Security-Manager",
+		"_postman_id": "e348e970-6c74-ad8e-d79c-5a344c3031cb",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9002/security-manager/v1/token",
+			"request": {
+				"url": "http://localhost:9002/security-manager/v1/token",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dGVzdDE6cGFzc3dvcmQ=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9002/security-manager/v1/ipa/user/test1",
+			"request": {
+				"url": "http://localhost:9002/security-manager/v1/ipa/user/test1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dGVzdDE6cGFzc3dvcmQ=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9002/security-manager/v1/ipa/registration/request",
+			"request": {
+				"url": "http://localhost:9002/security-manager/v1/ipa/registration/request",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"uid\": \"andrea2\",\n  \"givenname\": \"andrea1\",\n  \"sn\": \"andrea1\",\n  \"mail\": \"a.cherici@almaviva.it\",\n  \"userpassword\": \"password1\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9002/security-manager/v1/ipa/registration/confirm",
+			"request": {
+				"url": {
+					"raw": "http://localhost:9002/security-manager/v1/ipa/registration/confirm?token=123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"security-manager",
+						"v1",
+						"ipa",
+						"registration",
+						"confirm"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "123456",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
