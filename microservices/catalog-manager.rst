@@ -1,5 +1,4 @@
  
- 
 Catalog Manager
 ============================================================
 
@@ -29,6 +28,8 @@ To test the endpoints I suggest to use a tool similar to `Postman <https://www.g
 
 Install Integrated
 -------------------
+
+This is the recommended installation to work with Daf-dataportal. 
 
 
 Section 3

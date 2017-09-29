@@ -1,0 +1,62 @@
+
+Freeipa LDAP version: 4.4.0
+=========================================
+
+This docker works only with Ubuntu we have tried with **mac** and **windows**
+but we still have problems. Any help in this direction is very welcomed
+
+- Follow these steps to run the Docker images:
+    
+    - Create Freeipa config directory
+        mkdir /var/lib/ipa-data
+    - On your file hosts add this entry 
+       - vi /etc/hosts
+         172.17.0.1	ipa.example.test
+    - Run Freeipa container:
+        ./startfreeipa.sh
+
+
+
+- Answer to the question:
+    
+        Do you want to configure integrated DNS (BIND)? [no]:   --> press "Enter"
+    
+        Server host name [ipa.example.test]:                    --> press "Enter"
+    
+        Please confirm the domain name [example.test]:          --> press "Enter"
+    
+        Please provide a realm name [EXAMPLE.TEST]:             --> press "Enter"
+    
+        Continue to configure the system with these values? [no]:  --> type "y" and press "Enter"
+    
+Wait some time until freeipa server is completely configured and started.
+The server is ready when on the shell appear the followuing message:
+
+        FreeIPA server configured.
+    
+NOTE: Only first time that build image and run docker you need to ask to previous questions.
+
+
+- You can connect to Freeip Server with web interface:
+        https://172.17.0.1:443
+        USER admin
+        PW adminpassword
+
+- You can also connect with LDP client with Server IP address "172.17.0.1" 
+
+- The container can the be started and stopped:
+
+        docker stop freeipaldap
+    
+        docker start freeipaldap
+
+**NOTE**: If you reboot your host you need only to start freeipa docker. All data and configurations are stored in /var/lib/ipa-data/ 
+
+**NOTE**: The startfreeipa.sh execute the following docker command:
+        docker run -it -p 389:389 -p 443:443 -p 636:636 --name freeipaldap --cap-add SYS_ADMIN --security-opt seccomp:unconfined -v /sys/fs/cgroup:/sys/fs/cgroup:ro --tmpfs /run --tmpfs /tmp -v /var/lib/ipa-data:/data:Z -h ipa.example.test italia/freeipa-server --ds-password=dspassword --admin-password=adminpassword
+
+
+- Build manually only for develpment purpose
+    
+    #Build freeipa image only if you want improove the system
+    #    docker build -f Dockerfile.centos-7 -t freeipa-server .
