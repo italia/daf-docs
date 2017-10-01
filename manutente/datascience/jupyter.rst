@@ -68,6 +68,9 @@ Una volta attivata con successo una sessione Spark, avete l'ambiente pronto per 
 
    df.printSchema
 
+
+.. image:: img_jupyter/conf_sparkdf.jpeg
+
 =====================
 Risorse utili
 =====================
