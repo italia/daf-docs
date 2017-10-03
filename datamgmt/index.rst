@@ -7,7 +7,7 @@ Data Management Architecture
   :hidden:
   
   dataset
-  dataset-metadata-schemas
+  dataset-metadata-schemas/index
   dataset-adding
   data-ingestion
   data-at-rest
