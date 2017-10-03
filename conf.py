@@ -435,8 +435,8 @@ epub_exclude_files = ['search.html']
 # epub_use_index = True
 
 extlinks = {
-    'dafjupyter': ('http://daf.jupiter.italia.it', 'http://daf.jupiter.italia.it'),
+    'dafjupyter': ('http://jupyterhub.default.svc.cluster.local:8000', 'http://jupiter.daf.italia.it'),
     'dataportal': ('http://dataportal.italia.it', 'http://dataportal.italia.it'),
+    'superset': ('http://supersetd.default.svc.cluster.local:8088', 'http://superset.daf.italia.it'),
     'example': ('http://url.it/%s', 'Shown URL')
-
 }

@@ -6,7 +6,7 @@ Datascience con Jupyter Notebook
 Introduzione
 ============
 
-`Jupyter Notebook <http://jupyter.org/>`_ è un applicazione Web open-source che permette di creare e condividere documenti testuali interattivi, contenenti oggetti quali equazioni, grafici e codice sorgente eseguibile.
+`Jupyter Notebook <http://jupyter.org/>`_ è un'applicazione Web open-source che permette di creare e condividere documenti testuali interattivi, contenenti oggetti quali equazioni, grafici e codice sorgente eseguibile.
 Jupiter è diventato uno standard de-facto per data scientist perché offre la possibilità di realizzare, documentare e condividere analisi di dati all'interno di un framework che supporta [1]_:
 
 * operazioni di *data cleaning & trasformation*, simulazioni numeriche, modellazione statistica, machine learning e altro;
