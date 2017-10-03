@@ -34,6 +34,5 @@ Endpoints
 
 There are two endpoints:
 
-- \/*validate*   : in order to validate a document
-- \/*validators* : in oder to ghe the list of available validators 
-  
+- \/*/validator/validate*   : in order to validate a document
+- \/*/validator/validators* : in oder to ghe the list of available validators 
