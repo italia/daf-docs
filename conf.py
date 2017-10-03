@@ -32,6 +32,7 @@
 # ones.
 extensions = [
     'sphinx.ext.todo',
+    'sphinx.ext.extlinks',
     'sphinx.ext.imgmath',
 ]
 
@@ -128,7 +129,7 @@ todo_include_todos = True
 html_theme = "sphinx_rtd_theme"
 
 #html_theme = 'sphinx_italia_theme'
-#html_theme_path = ["_themes", ]
+html_theme_path = ["_themes", ]
 
 
 
@@ -432,3 +433,10 @@ epub_exclude_files = ['search.html']
 # If false, no index is generated.
 #
 # epub_use_index = True
+
+extlinks = {
+    'dafjupyter': ('http://daf.jupiter.italia.it', 'http://daf.jupiter.italia.it'),
+    'dataportal': ('http://dataportal.italia.it', 'http://dataportal.italia.it'),
+    'example': ('http://url.it/%s', 'Shown URL')
+
+}
