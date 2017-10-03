@@ -19,4 +19,4 @@ Contents:
     Security & Privacy issues <security/index>
     Microservices (work in progress) <microservices/index>
     Docker recipies (work in progress) <docker/index>
-    Manuale Utente <manutente/index>
+    [ITA] Manuale utente <manutente/index>
