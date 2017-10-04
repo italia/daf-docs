@@ -75,3 +75,5 @@ References
 [1] `FreeIpa docker-hub documentation <https://hub.docker.com/r/freeipa/freeipa-server/>`_.
 
 [2] `Using Free Ipa for user authentication <https://annvix.com/using_freeipa_for_user_authentication>`_.
+
+[3] `FreeIpa website <https://www.freeipa.org/page/Docker>`_.
