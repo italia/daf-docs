@@ -28,8 +28,7 @@ Endpoints
 
 There is a list of basic endpoints:
 
-- */kb/v1/ontologies*        : using this endpoint it's possible to add new ontologies using HTTP POST with parameters.
-By conventions the user should assign a prefix / context pair (which willbe unique in the underlying repository catalog).
+- */kb/v1/ontologies*        : using this endpoint it's possible to add new ontologies using HTTP POST with parameters. By conventions the user should assign a prefix / context pair (which willbe unique in the underlying repository catalog).
 - */kb/v1/ontologies/remove* : the endpoint is dedicated to remove an existing ontology, using the context where it was published.
 - */kb/v1/contexts*          : a list of the existing context can e retrieved: by convention ontologies are published on assigned contexts, which will be different from the ones used for data.
 - */kb/v1/prefixes*          : this endpoints returns the full list of used prefix / namespace pairs, where the namespace usually coincide with an assigned contexts on the underlying repository.
