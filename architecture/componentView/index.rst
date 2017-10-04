@@ -165,7 +165,7 @@ On the other hand, the component offers brief metadata about the available ontol
 
 
 For a list of components and functionalities currently provided by the
-DatasetManager and the related specialized component, please see the `daf-semantics <https://github.com/italia/daf-semantics>`__ repository.
+SemanticManager and the related specialized component, please see the `daf-semantics <https://github.com/italia/daf-semantics>`__ repository.
 
 
 
