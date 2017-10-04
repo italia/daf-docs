@@ -10,6 +10,7 @@ involving the usage of ontologies and core vocabularies supporting both DAF proc
 
 Install Standalone.
 --------------------
+
 - git clone https://github.com/italia/daf-semantics
 - cd daf-semantics/semantic_manager
 - sbt docker:publishLocal
@@ -24,8 +25,8 @@ DAF Integration
 -------------------
 
 This microservice is currently integrated:
-- with the ingestion form of DAF, providing suggestions for the "semantic" annotations of dataset fields.
-Those annotations are saved into the schema for the imported dataset, and act as references for the standardization of fields.
+
+- with the ingestion form of DAF, providing suggestions for the "semantic" annotations of dataset fields. Those annotations are saved into the schema for the imported dataset, and act as references for the standardization of fields.
 - with the public dataportal, providing a list of available ontologies and "core" vocabularies.
 
 
