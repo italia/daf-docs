@@ -29,17 +29,17 @@ L'idea è fornire alle Pubbliche Amministrazioni e alla community di utilizzator
 
 Nell'area privata è possibile [1]_:
 
-* Accedere al cruscotto utile alla registrazione di nuovi dataset. La procedura guidata facilita una completa metadatazione, in conformità al profilo DCATAP_IT e arricchito di informazioni sulla struttura del dato e relativa semantica [2]_.
+* Accedere al cruscotto utile alla registrazione di nuovi dataset. La procedura guidata facilita una completa metadatazione in conformità al profilo DCAT-AP_IT; i metadati sono arricchiti con informazioni sulla struttura del dato e relativa semantica [2]_.
 
-* Creare e pubblicare Data Story, ovvero dei blog post in cui è possibile inserire nativamente risultati di analisi svolte con i tool messi a disposizione dal DAF.
+* Creare e pubblicare Data Story, ovvero dei blog post in cui è possibile inserire nativamente risultati di analisi svolte con gli strumenti messi a disposizione dal DAF.
 
-* Creare e pubblicare Dashboard, ovvero insieme di grafici creati con i tool messi a disposizione dal DAF.
+* Creare e pubblicare Dashboard, ovvero un insieme di grafici creati con gli strumenti messi a disposizione dal DAF.
 
-* Accedere a tool di business intelligence (Superset) e strumenti più orientati alla data visualization (Metabase). I risultati delle analisi svolti con questi tool possono essere integrati nativamente nelle Data Story e Dashboard.
+* Accedere allo strumento di business intelligence (Superset) e strumenti più orientati alla data visualization (Metabase). I risultati delle analisi svolti con questi strumenti possono essere integrati nativamente nelle Data Story e nelle Dashboard.
 
-* Utilizzare Jupyter Notebook integrato con il cluster big data del daf, e da cui effettuare analisi esplorative fino a complessi modelli di machine learning.
+* Utilizzare Jupyter Notebook integrato con il cluster big data del DAF, da cui effettuare analisi esplorative fino a complessi modelli di machine learning.
 
-Si rimanda alle relative sezioni di questa guida per una introduzione più dettagliata dei diversi tool messi a disposizione.
+Si rimanda alle relative sezioni di questa guida per una introduzione più dettagliata dei diversi strumenti messi a disposizione.
 
 
 .. [1] Elenco non esaustivo e in evoluzione.
