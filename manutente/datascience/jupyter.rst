@@ -62,9 +62,16 @@ Cliccare nel tab 'Add Endpoint' e inserire le seguenti informazioni:
 Cliccando il pulsante 'Add Endpoint' la configurazione sarà aggiunta al notebook.
 
 Dopo aver configurato correttamente la connessione al server Livy sarà possibile creare una *SparkSession*.
-Per fare ciò: selezionare il tab 'Create Session'; scegliere nel menu a tendina 'Endpoint' l'endpoint appena configurato (http://livy:8998); dare un nome alla sessione che si sta creando valorizzando il campo 'Name'; selezionare il linguaggio che si intende usare nel notebook (ad esempio 'scala'); cliccare il pulsante 'Create Session'.
+Per fare ciò: 
+
+* selezionare il tab 'Create Session'; 
+* scegliere nel menu a tendina 'Endpoint' l'endpoint appena configurato (http://livy:8998); 
+* dare un nome alla sessione che si sta creando valorizzando il campo 'Name'; 
+* selezionare il linguaggio che si intende usare nel notebook (ad esempio 'scala'); 
+* cliccare il pulsante 'Create Session'.
+
 Il sistema impiegherà qualche decina di secondi per attivere il collegamento con il cluster Spark.
-Al termine dell'operazione il notebook è pronto caricare dataset e realizzare analisi.
+Al termine dell'operazione il notebook è pronto per caricare dataset e realizzare analisi.
 
 Se tutto è andato andato a buon fine, sarà visualizzata una tabella con le informazioni prodotte da YARN (il gestore delle risorse del cluster Spark) e la seguente frase conclusiva "SparkSession available as 'spark'.", così come mostrato nella figura successiva.
 
