@@ -8,9 +8,9 @@ Superset è stato integrato con il DAF per offrire agli utenti la possibilità d
 Questa sezione è pensata per fornire indicazioni utili alla creazione di tabelle e grafici.
 Per approfondimenti sulle funzionalità e sulle modalità d'uso di Superset, si rimanda alle documentazione suggerita nella sezione 'Risorse Utili' di questa guida.
 
-=================================
-Configurazione - Aggiunta Dataset
-=================================
+========================================
+Configurazione e aggiunta  di un dataset
+========================================
 Un utente può accedere alla homepage di Superset direttamente dal Dataportal e utilizzarlo per creare datastories e dashboard che integrano le analisi realizzate.
 Nel menù laterale sinistro della sezione privata del Dataportal è infatti presente un pulsante 'Business Intelligence' (:superset:`/`) che abilita l'accesso a Superset.
 Una volta entrati in Superset, si accede alla lista delle dashboard create nell'ambito dell'organizzazione a cui afferisce l'utente che ha effettuato l'accesso.
@@ -50,7 +50,7 @@ Superset offre nativamente una console per eseguire query SQL, a cui potete acce
 
 
 =================================
-Creazione di un Grafico ('Slice')
+Creazione di un grafico ('Slice')
 =================================
 
 Il prossimo step è creare un grafico con il dataset importato.
@@ -81,7 +81,7 @@ Infine, eseguire la query che aggiorna il grafico, cliccando sul bottone 'Query'
 
 
 ==========================
-Creazione di una Dashboard
+Creazione di una dashboard
 ==========================
 
 Le dashboard sono aggregazioni di 'slices' utili a tenere su un unico pannello i grafici di interesse.

@@ -1,13 +1,13 @@
-Datascience
+Data science
 ======================================
 
-Contents:
+Il Dataportal offre un ambiente integrato per svolgere task di data science come analisi esplorative, costruzione di grafici e dashboard e sviluppo di modelli statistici e di machine learning.
+
+Gli strumenti di data analysis e data visualization messi a disposizione dal DAF:
 
 .. toctree::
    :maxdepth: 2
 
-    Datascience con Jupyter Notebook <jupyter>
-    Data visualization con Superset <superset>
-    Data visualization con Metabase <metabase>
-
-Il dataportal offre un ambiente integrato per svolgere task di data science come analisi esplorative, costruzione di grafici e dashboard e sviluppo di modelli statistici e di machine learning.
+    Jupyter Notebook, strumento per data scientist <jupyter>
+    Superset, strumento di data visualization <superset>
+    Metabase, strumento di data visualization <metabase>

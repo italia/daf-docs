@@ -438,5 +438,7 @@ extlinks = {
     'dafjupyter': ('http://jupyterhub.default.svc.cluster.local:8000', 'http://jupiter.daf.italia.it'),
     'dataportal': ('http://dataportal.italia.it', 'http://dataportal.italia.it'),
     'superset': ('http://supersetd.default.svc.cluster.local:8088', 'http://superset.daf.italia.it'),
+    'dafpubblico': ('http://daf.italia.it', 'http://daf.italia.it'),
+    'dafprivato': ('http://daf.italia.it/dataplatform', 'http://daf.italia.it/dataplatform'),
     'example': ('http://url.it/%s', 'Shown URL')
 }
