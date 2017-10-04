@@ -27,7 +27,7 @@ To test the endpoints I suggest to use a tool similar to `Postman <https://www.g
 DAF Integration
 -------------------
 
-This microservice will be integrated in the next months with the front-end component "semantic_frontend"
+This microservice will be integrated with the front-end component "semantic_frontend" in the block called "Public Manager" as you can see in the DAF architecture main schema.
 
 Endpoints
 -------------------
@@ -36,3 +36,7 @@ There are two endpoints:
 
 - */validator/validate*   : in order to validate a document
 - */validator/validators* : in oder to ghe the list of available validators 
+
+Detailed informations about the service can be found `here <https://github.com/italia/daf-semantics/tree/master/semantic_validator>`_
+
+
