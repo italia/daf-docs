@@ -31,7 +31,7 @@ Scorrendo la lista è possibile trovare e selezionare la tabella che contiene il
 Alternativamente, è possibile importare una nuova tabella.
 Una volta individuato il dataset di interesse utilizzando il Dataportal, sarà necessario copiare il riferimento al dataset presente nelle schede di dettaglio del dataset stesso.
 Tornado nella sezione Tables su Superset, cliccare sul bottone '+' in alto a destra.
-Si aprirà la pagina 'Add Table' in cui sarà possibile selezionare il database di interesse ('opendata' nel caso di esempio) e indicare il nome della tabella che sarà il riferimento che precedentemente copiato dalla scheda informativa del dataset.
+Si aprirà la pagina 'Add Table' in cui sarà possibile selezionare il database di interesse ('opendata' nel caso di esempio) e indicare il nome della tabella che sarà il riferimento precedentemente copiato dalla scheda informativa del dataset.
 Infine, cliccare sul bottone 'Save' in basso a sinistra.
 
 .. image:: img_superset/conf_tableadd_3.jpeg
@@ -44,7 +44,7 @@ Esplorare un dataset con SQL Lab
 ================================
 
 Prima di costruire un grafico, si consiglia di analizzare il contenuto del dataset scelto.
-Superset offre nativamente una console per eseguire query SQL, a cui potete accedere cliccando su 'SQL Lab' e poi su 'SQL Editor'.
+Superset offre nativamente una console per eseguire query SQL, a cui si può accedere cliccando su 'SQL Lab' e poi su 'SQL Editor'.
 
 .. image:: img_superset/conf_sqllab_1.jpeg
 
@@ -54,7 +54,7 @@ Creazione di un grafico ('Slice')
 =================================
 
 Il prossimo step è creare un grafico con il dataset importato.
-Come appena visto utilizzando 'SQL Editor', il dataset contiene informazioni georeferenziate sui luoghi della cultura di Matera, per cui potrebbe essere una buona idea di graficarli su una mappa utilizzando l'integrazione con MapBox.
+Come appena visto, utilizzando 'SQL Editor', il dataset contiene informazioni georeferenziate sui luoghi della cultura di Matera, per cui potrebbe essere una buona idea graficarle su una mappa utilizzando l'integrazione con MapBox.
 
 A tal fine, cliccare sul menu 'Slices' posto nella barra in alto: comparirà l'elenco di slices già creati.
 Anche in questo caso è possibile utilizzare filtri per cercare il grafico di interesse.
@@ -73,7 +73,7 @@ Nel caso in esempio vanno impostate le seguenti informazioni:
 
 * latitudine e longitudine
 * 'label', ovvero il testo che comparirà all'interno del punto disegnato sulla mappa
-* 'Viewpoint' con le info di latitudine, longitudine e zoom di default che verranno utilizzate per la visualizzazione iniziale.
+* 'Viewpoint' con le informazioni di latitudine, longitudine e zoom di default che verranno utilizzate per la visualizzazione iniziale.
 
 Infine, eseguire la query che aggiorna il grafico, cliccando sul bottone 'Query' in alto a sinistra, e salvare la 'slice' cliccando sul pulsante 'Save'.
 
