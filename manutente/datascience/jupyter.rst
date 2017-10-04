@@ -4,23 +4,29 @@ Datascience con Jupyter Notebook
 
 ============
 Introduzione
-============       
- 
-`Jupyter Notebook <http://jupyter.org/>`_ è un tool open-source che permette di eseguire codice in maniera interattiva. É diventato uno standard de facto per data science perché offre la possibilità di sviluppare analisi dati, generare grafici, costruire modelli di machine learning e molto altro, con i tuoi linguaggi di programmazione preferiti.
+============
 
-Abbiamo integrato Jupyter con la piattaforma big data del DAF cosi che si possa facilmente avere accesso ai dati disponibili, fare analisi e condividerle con la community. Jupyter vi permetterà di dialogare direttamente con il cluster Spark sia in Scala che in Python.
+`Jupyter Notebook <http://jupyter.org/>`_ è un'applicazione Web open-source che permette di creare e condividere documenti testuali interattivi, contenenti oggetti quali equazioni, grafici e codice sorgente eseguibile.
+Jupiter è diventato uno standard de-facto per data scientist perché offre la possibilità di realizzare, documentare e condividere analisi di dati all'interno di un framework che supporta [1]_:
 
-Questo breve How-To è pensato per fornire le informazioni basilari per configurare un notebook Jupyter utile per effettuare analisi sui dataset contenuti nel DAF, utilizzando la capacità di calcolo del cluster Spark.
+* operazioni di *data cleaning & trasformation*, simulazioni numeriche, modellazione statistica, machine learning e altro;
+* l'esecuzione di applicazioni Scala e Python su piattaforme big data, grazie all'integrazione con Apache Spark.
 
-Molti degli open data resi disponibili sono di modeste entità, per cui utilizzare Spark potrebbe sembrare (e di fatto lo è) come sparare ad una mosca con un cannone. Il vantaggio di questo approccio è quello di utilizzare un unico framework di analisi che si presta a scalare nativamente, ed è utile in caso di analisi che hanno bisogno di 'unire' congiuntamente molti dataset, il tutto fatto all'interno della stessa piattaforma. Per analisi più semplici, si consiglia di scaricare il dataset sulla propria macchina e utilizzare strumenti di analisi come Python (panda + scikit) o R.
+A fronte di queste caratteristiche, Jupyter è stato scelto per essere uno degli strumenti messi a disposizione degli utenti del DAF.
+L'obiettivo è quello di favorire l'analisi dei dati presenti nel DAF stesso e la pubblicazione su Web dei relativi risultati.
 
-==============
-Configurazione
-============== 
-Il notebook del DAF è disponibile a questo indirizzo: `http://jupyter.org <http://jupyter.org/>`_
-Una volta effettuato il login con le credenziali fornite per il dataportal, entrerete nella vostra home, che conterrà i notebook che avete creato (al primo accesso la home sarà vuota). 
+Questo breve *how-to* è pensato per fornire le informazioni basilari per configurare un notebook Jupyter utile per effettuare analisi sui dataset contenuti nel DAF utilizzando la capacità di calcolo di un cluster Spark.
+Pertanto, qualora si intenda eseguire analisi gestibili su un singolo laptop, si consiglia di scaricare i dataset sulla propria macchina e realizzare le analisi localmente.
+In tal caso si consideri che le analisi locali possono essere realizzate, oltre che con framework convenzionali quali R e Python (panda + scikit), anche con un'`istallazione locale di Jupyter Notebook <http://jupyter.org/install.html>`_.
 
-Per iniziare una nuova analisi, la prima cosa da fare è scegliere l'ambiente di sviluppo (kernel) fra quelli disponibili, cliccando sul pulsante 'new' in alto a destra. Avete a disposizione le seguenti possibilità:
+=========================================
+Creazione e configurazione di un notebook
+=========================================
+Per accedere alla console Jupiter del DAF collegarsi all'indirizzo :dafjupyter:`/`.
+Una volta effettuato il login con le credenziali fornite per il dataportal, si avrà accesso alla propria home nella quale è riportato l'elenco dei notebook associati all'utenza (al primo accesso l'elenco sarà vuoto).
+
+Per iniziare una nuova analisi è necessario creare un nuovo notebook scegliendo l'ambiente di sviluppo (*kernel*).
+A tal fine cliccare sul pulsante 'new' in alto a destra e selezionare una delle seguenti voci dal menù a tendina:
 
 * 'PySpark': Notebook Python 2 integrato con Spark
 * 'PySpark3': Notebook Python 3 integrato con Spark
@@ -30,18 +36,37 @@ Per iniziare una nuova analisi, la prima cosa da fare è scegliere l'ambiente di
 
 .. image:: img_jupyter/conf_choosekernel.jpeg
 
-Una volta effettuata la scelta, si aprirà un nuovo tab nel browser con il vostro nuovo notebook. La prima cosa da fare e' configurare la connessione al cluster Spark del DAF, specificando l'endpoint del server Livy e le vostre credenziali di accesso (Nelle prossime release, forniremo un semplice script che vi permetterà di effettuare questa operazione solo una volta, al momento dovrete autenticarvi presso il server ogni volta che aprite un nuovo notebook. We'll keep you posted!). Per fare ciò, eseguite i seguenti comandi nel primo quadrante disponibile, ed eseguite premendo [shift] + [invio]
+Una volta effettuata la selezione, Jupiter provvederà a creare un notebook del tipo selezionato e a visualizzarlo in una nuova scheda del browser.
+
+La prima operazione da eseguire è la configurazione della connessione verso il cluster Spark del DAF.
+A tal fine è necessario configurare l'accesso al server `Livy <https://livy.incubator.apache.org>`_, specificando l'endpoint del server, il tipo di autenticazione e le credenziali di accesso [2]_.
+
+Per fare ciò è sufficiente copiare e incollare i seguenti comandi nel primo quadrante disponibile, ed eseguirli premendo la combinazione di tasti *[shift] + [invio]*:
+
+.. code-block:: none
+
+ %load_ext sparkmagic.magics
+  %manage_spark
+
+L'esecuzione dei comandi produrrà l'apertura di un pannello come mostrato in figura:
 
 .. image:: img_jupyter/conf_livyaddendpoint.jpeg
 
-Si aprirà un pannello come mostrato in figura: cliccate nel tab 'Add Endpoint' e inserite le seguenti informazioni:
+Cliccare nel tab 'Add Endpoint' e inserire le seguenti informazioni:
 
 * Address: http://livy:8998
 * Auth type: Basic_Access
-* Username: il vostro username
-* Password: la vostra password
+* Username: *<il vostro username>*
+* Password: *<la vostra password>*
 
-Aggiungerete la configurazione cliccando il pulsante a destra (accanto a Password) 'Add Endpoint'. Ora spostatevi nel tab 'Create Session', scegliete nel menu a tendina 'Endpoint' l'endpoint che avete configurato sopra (http://livy:8998), date un nome alla sessione che state creando utilizzando il campo 'Name', scegliete il linguaggio che adeguato per il vostro notebook (nel nostro caso 'scala'), e cliccate il pulsante in fondo a destra 'Create Session'. Questa operazione, che durerà qualche decina di secondi, attiverà il collegamento con il cluster Spark con il quale sarete pronti a iniziare le vostre analisi! Per verificare che tutto sia andato a buon fine, dovrete aspettarvi una tabella con le informazioni ritornate da Yarn e la seguente frase conclusiva "SparkSession available as 'spark'."
+Cliccando il pulsante 'Add Endpoint' la configurazione sarà aggiunta al notebook.
+
+Dopo aver configurato correttamente la connessione al server Livy sarà possibile creare una *SparkSession*.
+Per fare ciò: selezionare il tab 'Create Session'; scegliere nel menu a tendina 'Endpoint' l'endpoint appena configurato (http://livy:8998); dare un nome alla sessione che si sta creando valorizzando il campo 'Name'; selezionare il linguaggio che si intende usare nel notebook (ad esempio 'scala'); cliccare il pulsante 'Create Session'.
+Il sistema impiegherà qualche decina di secondi per attivere il collegamento con il cluster Spark.
+Al termine dell'operazione il notebook è pronto caricare dataset e realizzare analisi.
+
+Se tutto è andato andato a buon fine, sarà visualizzata una tabella con le informazioni prodotte da YARN (il gestore delle risorse del cluster Spark) e la seguente frase conclusiva "SparkSession available as 'spark'.", così come mostrato nella figura successiva.
 
 .. image:: img_jupyter/conf_livycreatesession.jpeg
 
@@ -50,17 +75,18 @@ Aggiungerete la configurazione cliccando il pulsante a destra (accanto a Passwor
 Caricare un dataset
 ===================
 
-Una volta attivata con successo una sessione Spark, avete l'ambiente pronto per iniziare la vostra analisi. La prima cosa da fare è creare uno Spark DataFrame con il dataset che volete analizzare, procedendo come segue:
+Una volta attivata con successo una sessione Spark, l'ambiente è pronto per iniziare l'attività di analisi.
+La prima cosa da fare è creare uno Spark DataFrame con il dataset che si vuole analizzare, procedendo come segue:
 
-* Identificate il dataset sul dataportal e tenete traccia del path indicato nella scheda informativa. Nel caso in esempio, abbiamo scelto il dataset '_19luoghidellacultura_a_35e6edb1_4dec_4553_aa7a_5395bdc4024c_a_csv'.
-* Eseguite il seguente comando nel notebook, che chiede a Spark di creare un nuovo dataframe contenente il dataset specificato: 
+* Identificare il dataset su :dataportal:`/` e tenere traccia del path e del formato indicati nella scheda informativa. Nel caso in esempio, si è scelto il dataset 'abitazioni_d_ritirate_d_e_d_ultimate_d_per_d_numero_d_stanze_d_anno_d_2013_d_4e3f6d25_63'.
+* Eseguire nel notebook il seguente comando, che chiede a Spark di creare un nuovo DataFrame contenente il dataset specificato:
 
 .. code-block:: scala
 
    val df = (spark.read.format("csv")
         .option("header", "true")
         .option("inferSchema", "true")
-        .load("/daf/opendata/_19luoghidellacultura_a_35e6edb1_4dec_4553_aa7a_5395bdc4024c_a_csv")
+        .load("/daf/opendata/abitazioni_d_ritirate_d_e_d_ultimate_d_per_d_numero_d_stanze_d_anno_d_2013_d_4e3f6d25_63")
    )
 
 * [Optional] Eseguite il seguente comando per ottenere lo schema del dataframe:
@@ -72,12 +98,17 @@ Una volta attivata con successo una sessione Spark, avete l'ambiente pronto per 
 
 .. image:: img_jupyter/conf_sparkdf.jpeg
 
+A questo punto il notebook è pronto all'uso. Per approfondimenti sull'utilizzo di Spark e di Jupyter Notebook si rimanda alla documentazione ufficiale.
+
 =====================
 Risorse utili
 =====================
 
-Per chi volesse approfondire l'utilizzo di Spark e di Jupyter Notebook, suggeriamo una lista non esaustiva di risorse utili da cui partire:
-
  * http://spark.apache.org/docs/latest/sql-programming-guide.html
  * http://jupyter.org/
 
+
+**Note**
+
+ .. [1] Per una panoramica completa sulle funzionalità offerte da Jupiter e per l'elenco completo dei linguaggi di programmazione da esso supportati, far rifererimento al `sito ufficiale <http://jupyter.org/>`_.
+ .. [2] Al momento l'autenticazione presso il server è necessaria ogni volta che si crea un nuovo notebook. Nelle prossime release del DAF, sarà fornito uno script che permetterà di effettuare questa operazione solo una volta.
