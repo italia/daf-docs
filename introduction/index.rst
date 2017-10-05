@@ -1,50 +1,35 @@
-Data & Analytics Framework (DAF)
-================================
+Data & Analytics Framework
+==========================
 
-The Data & Analytics Framework (DAF) is a combination of:
+The `Data & Analytics Framework <https://pianotriennale-ict.readthedocs.io/en/latest/doc/09_data-analytics-framework.html>`_ (DAF, in short) is an open source project
+developed in the context of the activities planned by the
+Italian `Three-Year Plan for ICT in Public Administration 2017 - 2019 <https://pianotriennale-ict.readthedocs.io/en/latest/>`_,
+approved by the Italian Government in the 2017.
 
--  A **Big Data Platform** to centralize and store (data lake),
-   manipulate and standardize (data engine) and re-distribute (API &
-   Data Application) data and insights.
--  A **Data Team** (data scientists + data engineers) which uses and
-   evolve the Big Data Platform to analyze data, create ML models and
-   build data applications and data visualization products.
+In this scenario, the main goal of the DAF is to promote the exchange of
+public data between Italian PAs, to support the diffusion of open data,
+and to enable data-driven policies.
+The Italian instance of the DAF is developed and maintanied by a **Data Team** composed by data scientists and data engineers,
+which uses and evolves the framework to analyze data, create machine learning models and build data applications and data visualization products.
 
-DAF has a the following twofold goal:
+Anyway, the DAF is a generic enough tool to be re-used in other countries
+and other application domains. In fact, the DAF is composed by:
 
--  eliminate silos into which data are typically "trapped", and make
-   entities be logically interconnected so to shed light on phenomena by
-   looking at them via multiple perspectives;
--  easy analysts and data scientists make analysis and build
-   applications that uses the insights from data to create "intelligent"
-   services.
+- a **Dataportal**, a Web user interface providing:
 
-This documentation focuses on the Big Data Platform.
+   - a catalog of open-data datasets based on `CKAN <https://ckan.org>`_;
+   - a set of tools for data analysis and visualization;
+   - a tool to handle data ingestion, data and metadata management processes;
+   - a tool for publishing and sharing data stories.
 
-A key concept underlying the DAF platform is the `dataset <../datamgmt/dataset>`_.
+- a **Big Data platform** to centralize and store, manipulate and standardize and re-distribute data and insights.
 
-In a nutshell, you can think the DAF platform as a big data environment
-offering capabilities for:
+The DAF is under development. This is a snapshot of the roadmap:
 
--  *storing and managing datasets*: users can register datasets and to
-   load them on the platform specifying the ingestion models (e.g.
-   batch, streaming), the serialization formats (e.g. Avro, Parquet),
-   the desired serving layers (e.g. HBase, Impala), metadata, etc;
--  *processing and analysing datasets*: the platform provides an
-   environment composed by a set of tools for data scientists and
-   analysts. By using these tools these ones can perform analysis on
-   data, run statistical and machine learning models, and produce data
-   visualizazions and reports;
--  *redistributing datasets, developing data application, publishing
-   insights*: the platform provides tools for enabling the publication
-   of opendata, data stories, data application, etc.
+- By October 2017: Alpha release.
+- By November 2017: Beta release.
+- By December 2017: 1.0 release.
 
-The following image provides an architectural overview of the DAF:
+Both the Alpha and Beta releases will be tested by selected communities and Italian PAs.
 
-`Update and Insert
-Image <https://docs.google.com/presentation/d/1LDDrG7VsYoXXIbfbg6tQ9z7DfHw7ukkNnwVygt6jOOQ/edit>`__
-
-Continue your tour looking documentation about:
-
--  `Data Management in DAF <../datamgmt>`__
--  the `DAF architecture <../architecture/>`__
+All contributes are welcome!

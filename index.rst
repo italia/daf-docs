@@ -12,11 +12,13 @@ Contents:
    :maxdepth: 2
 
     Introduction <introduction/index>
-    Cluster set-up <clusterSetup>
+    Overview <overview/index>
+    Dataset Abstraction <concepts/index>
+    Data Portal <dataportal/index>
+    Big Data Platform <bigdataplatform/index>
     Data Management <datamgmt/index>
-    Architecture <architecture/index>
     DAF Technologies Ecosystem <ecosystem/index>
-    Security & Privacy issues <security/index>
     Microservices (work in progress) <microservices/index>
     Docker recipies (work in progress) <docker/index>
+    Playground (work in progress) <playground/index>
     [ITA] Manuale utente <manutente/index>

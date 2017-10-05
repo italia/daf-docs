@@ -1,0 +1,28 @@
+Big Data platform Architecture
+==============================
+
+The DAF Big Data platform has been originally designed to
+gather and store data coming from different Italian Public
+Administrations. As a consequence, it provides efficient and easy to use
+ingestion mechanisms for allowing external organisations to simply
+ingest their data into the platform with minimal human intervention.
+
+The DAF platform should not only provide support for data at rest and fast
+data (streaming), but also for storing and managing collections of
+unstructured data, textual documents. Besides providing those storing
+capabilities, the next main goal is to provide a powerful mechanism for
+data integration, i.e. a way for integrating data that traditionally
+reside on separate silos. Enabling the correlation of datasets normally
+residing on different systems/organizations can become a very powerful
+enabling factor for discovering new insights on the data. The platform
+should allow the data scientists to access its computational power for
+implementing advanced analytics algorithms.
+
+The Big Data architecture underlying the DAF is described by the following views:
+
+.. toctree::
+   :maxdepth: 1
+
+    Logical View <logicalView>
+    Component/microservice View <componentView/index>
+    Deployment View <deploymentView>

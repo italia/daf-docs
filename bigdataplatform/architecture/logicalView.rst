@@ -8,15 +8,19 @@ organise and publish the data in an efficient and secure way.
 
 The most important aspect to take into account in a data lake being set
 up is the data governance. Data governance means data organizations and
-metadata management. Being able to catalog the data sets together with
+metadata management. Being able to catalog the datasets together with
 their metadata is the prerequisite for implementing any further steps in
 the data lake set up such as data ingestion/egestion and data security.
 
+Implementing the Dataset Abstraction
+************************************
+
 The main abstraction the DAF platform is based upon is the
-`dataset <../dataset/>`__. In a few words, a dataset means a collections
-of records described by some kind of schema. A dataset is identified by
-a *logical URI* and it is associated to a *physical URI* that identifies
-the actual medium and location where the data is actually stored.
+`dataset <../dataset/>`__.
+From a technical point of view, a dataset is a collection of records described
+by a data schema.
+A dataset is identified by a *logical URI* and it is associated to a *physical URI* that identifies
+the medium and location where the data is actually stored.
 
 .. figure:: images/uris.png
    :alt: URIs relationships
@@ -29,15 +33,15 @@ example.
 
 Let’s define a *LogicalURI*, for example:
 
-``daf://open/milan/mobilita``
+``daf://ordinary/comune_milano/mobilita/sharing/bike``
 
 this can be bound to the following *PhysicalURI*
 
-``dataset:hdfs://open/milan/mobilita``
+``dataset:hdfs:/daf/ordinary/comune_milano/mobilita/sharing/bike``
 
 and eventually to a *ViewURI* like
 
-``dataset:hive://mobilita/milan``
+``dataset:hive://comune_milano/mobilita/sharing/bike``
 
 In other words, while a *PhysicalUri* represents the actual location on
 the Hadoop storage behind, a *ViewURI* represents the fact that a
@@ -53,20 +57,22 @@ organised in a catalog. This catalog is an essential component of the
 DAF platform: all the data ingestion steps and all the data
 manipulations’ steps that we allow on the data will be driven by it.
 
+DAF Big Data Architecture Layers
+********************************
+
 The high-level view of the architecture is pretty simple. It is based on
 the following layers:
 
 -  *𝜇-Service Layer*: it contains all the services needed to implement
    the platform functionalities. It also contains the catalog manager
-   𝜇-service (*CatalogManager*, described later in this page) which is
-   responsible to manage all the `datasets
-   metadata <../dataset-metadata>`__.
+   𝜇-service (*CatalogManager*) which is
+   responsible to manage all the `datasets metadata <../dataset-metadata>`__.
 
 -  *Ingestion Layer*: it is responsible for all the ingestion tasks. It
    is be based on tools for data ingestion automation like
    `NiFi <https://nifi.apache.org/>`__. It’s strongly integrated with
    the *CatalogManager* because, as already said, all the incoming data
-   is listed in the catalog: This implies all the ingestion supporting
+   is listed in the catalog: this implies all the ingestion supporting
    tools is integrated with the *CatalogManager*.
 
 -  *Hadoop Computational Layer*: it contains all the typical
