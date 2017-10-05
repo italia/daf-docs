@@ -1,3 +1,30 @@
+Big data platform
+=================
+
+More precisely, you can think the Big Data platform as an environment
+offering capabilities for:
+
+-  *storing and managing datasets*: users can register datasets and to
+   load them on the platform specifying the ingestion models (e.g.
+   batch, streaming), the serialization formats (e.g. Avro, Parquet),
+   the desired serving layers (e.g. HBase, Impala), metadata, etc;
+-  *processing and analysing datasets*: the platform provides an
+   environment composed by a set of tools for data scientists and
+   analysts. By using these tools these ones can perform analysis on
+   data, run statistical and machine learning models, and produce data
+   visualizazions and reports;
+-  *redistributing datasets, developing data application, publishing
+   insights*: the platform provides tools for enabling the publication
+   of opendata, data stories, data application, etc.
+
+   The following image provides an architectural overview of the DAF:
+
+   `Update and Insert
+   Image <https://docs.google.com/presentation/d/1LDDrG7VsYoXXIbfbg6tQ9z7DfHw7ukkNnwVygt6jOOQ/edit>`__
+
+   -  the `DAF architecture <../architecture/>`__
+
+
 DAF Architecture
 ================
 
@@ -22,7 +49,7 @@ Take a tour of the DAF architecture looking at:
 
 .. toctree::
    :maxdepth: 1
-   
+
     Logical View <logicalView>
     Component/microservice View <componentView/index>
     Deployment View <deploymentView>

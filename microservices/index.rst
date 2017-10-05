@@ -1,4 +1,4 @@
- 
+
 This is the list of all microservices
 ======================================
 
@@ -7,7 +7,10 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-    Example Microservice <example-microservice>
     Catalog Manager     <catalog-manager>
+    OntonetHub          <ontonethub>
     Security Manager    <security-manager>
-   
+    Semantic Manager    <semantic-manager>
+    Semantic Repository <semantic-repository>
+    Semantic Validator  <semantic-repository>  
+    Microservice Doc Template <example-microservice>
