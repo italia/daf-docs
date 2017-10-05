@@ -132,6 +132,22 @@ html_theme = 'sphinx_italia_theme'
 html_theme_path = ["_themes", ]
 
 
+# -- ReadTheDoc requirements and local template generation---------------------
+
+# on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+
+if not on_rtd:  # only import and set the theme if we're building docs locally
+    html_theme = 'sphinx_italia_theme'
+    html_theme_path = ["_themes", ]
+else:
+    # Override default css to get a larger width for ReadTheDoc build
+    html_context = {
+        'css_files': [
+            '_static/css/theme.css',
+            '_static/css/custom.css',
+        ],
+    }
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
