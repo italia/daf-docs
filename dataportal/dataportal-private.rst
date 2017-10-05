@@ -24,7 +24,8 @@ Basic Dependencies
 ------------------
 * daf-dataportal-backend [put link to documentation]
 * FreeIPA [put link to documentation]
-
+* CatalogManager [put link to documentation]
+* SecurityManager [put link to documentation]
 
 Features Enabling Dependencies
 ------------------------------:
