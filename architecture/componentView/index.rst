@@ -139,3 +139,46 @@ proper serving layer. For example, a dataset operation could create an
 Impala external mapped on the dataset directory sitting on HDFS. This
 publishing operation will provide the user with the JDBC/ODBC connection
 informations for connecting an external tool to that table.
+
+
+SemanticManager
+----------------
+
+The SemanticManager is the default access point for the OntoPA catalog, providing a set of functionalities 
+between the OntoPA front-end and the DAF platform itself.
+
+The component is currently still evolving: the first version doesn't handle RDF data directly, 
+focusing on general purpose abstractions for a repository of ontologies, but such extension is planned 
+for the next phase of development, accordingly to the evolutions of DAF itself and the various specialized components.
+
+The functionalities are indeed decomposed in a group of different components, 
+including operations for storing and querying ontologies on an underlying triplestore 
+(*semantic-repository*), for indexing and searching on the ontologies and core vocabularies 
+of the network (*ontonethub*), and a small list of dedicated enpoints for specific usage 
+(for example *semantic-validator*, designed for the validation of the compliance of a given ontology 
+to the DCAT-AP_IT standard). 
+
+The SemanticManager currently assist the DAF ingestion form with the informations needed for a simple annotation 
+of dataset fields in a standardized way.
+On the other hand, the component offers brief metadata about the available ontologies to the public front-end of daf / dataportal.
+
+
+
+For a list of components and functionalities currently provided by the
+SemanticManager and the related specialized component, please see the `daf-semantics <https://github.com/italia/daf-semantics>`__ repository.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
