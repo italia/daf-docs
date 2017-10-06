@@ -32,8 +32,15 @@ Other users of the DAF are:
 The DAF is based on a security system, access management and data separation that allows you to manage data access permissions.
 This way, all DAF features will be exposed to all types of users mentioned above. Users will only have access to the data for which the user profile they belong to has been granted access rights.
 
-The following image provides an high-level architectural overview of the DAF:
+The following image provides an architectural snapshot of the DAF architecture:
 
-INSERT HERE THE UPDATED IMAGE
+.. image:: img_overview/architecture.jpg
 
-INSERT HERE A SHORT DESCRIPTION OF THE IMAGE.
+In a few words, the DAF platform integrates:
+
+* front-end applications (dataportal-public and dataportal-private);
+* front-end open source platforms, developed by third-parties (e.g. Metabase, Superset, Jupiter, CKAN);
+* back-end open source big data platforms and technologies (e.g. OpenTsdb, Livy, Nifi, etc.)
+* several software components developed to manage all underlying DAF mechanisms (e.g. Catalog Manager, Ingestion Manager, etc.)
+
+Everything is deployed on a Kubernetes cluster and relies on a Cloudera cluster.
