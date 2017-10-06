@@ -11,5 +11,4 @@ This is the list of the developed microservices:
    Core microservices  <core/index>
    Dataportal microservices <dataportal/index>
    Semantic microservices <semantic/index>
-
-..  Microservice Doc Template <example-microservice>
+.. 
