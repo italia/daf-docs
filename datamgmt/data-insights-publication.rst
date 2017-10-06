@@ -33,32 +33,32 @@ Data insights publication
 
 In order to allow the publication of insights arising from data analysis
 activities, the platform provides the
-*Data Portal*. The  giving users
-the capabilities to access to DAF functionalities and data products. The
-Data Portal will expand the typical features of the popular data
-catalogues (e.i. dati.gov.it) with the following:
+*Data Portal* where users
+can access to DAF functionalities and data products. The
+Data Portal extends the features typically offered by popular data
+catalogues (in Italy dati.gov.it) with the following:
 
 -  **Data Visualization Templates**: they are modules that generate a
-   specific data visualization based on a data source specified. They
-   will give the user the possibility to use an already implemented
-   standard visualizations (i.e. line graph, bar chart, pie chart, etc.)
-   or to create his own graph in d3.js (or any other javascript graph
-   libraries supported), and they will natively integrate with the DAF
-   api exposing data. Data Visualization Template are also managed by
-   their CMS, to help for search and reusability.
+   specific data visualization based on a specified data source. They
+   provide users with both already implemented
+   standard visualizations (e.g., line graph, bar chart, pie chart, etc.)
+   and custom graphs in d3.js (or any other supported javascript graph
+   libraries) that can be created by the users themselves and natively integrated with the DAF
+   API exposing data. Data Visualization Templates are also managed by
+   their CMSs, in order to help in search and reusability.
 
 -  **Data Stories**: they are entities containing stories and analysis
    about a specific phenomena described with data, and can be made of
    text, Data Visualization objects, notebooks, gists/github resources.
    They are basically the way users create data related content in the
-   Data Portal.
+   Dataportal.
 
 -  **Social & Collaboration**: Users can create their own Data Stories
-   and share them on the platform so other users can read and/or fork
+   and share them on the platform so that other users can read and/or fork
    them to build a new Data Story on top of an existing one.
 
 -  **User Profile**: a restricted area where the user can see and manage
-   the content she created, as well as have access to personal data that
-   are available in DAF (i.e. the citizen dashboard). The latter
-   functionality will be accessed with a 2nd/3rd level SPID, meanwhile
-   for the first part a lighter registration may be enough.
+   the content (s)he created, as well as have access to personal data that
+   is available in DAF (i.e., the citizen dashboard). In successive releases, the latter
+   functionality will be accessed with a 2nd/3rd level SPID (the Italian national system for e-ID); meanwhile
+   for the first releases a lighter registration may be considered sufficient.
