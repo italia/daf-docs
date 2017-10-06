@@ -14,12 +14,13 @@ Several components are dependent to LDAP and/or FreeIPA. In this case, we offer 
 
     Dataportal-public <../dataportal/dataportal-public>
     Dataportal-private <../dataportal/dataportal-private>
-    CatalogManager <../microservices/catalog-manager>
-    SecurityManager <../microservices/security-manager>
-    FrontendManager <../microservices/frontend-manager>
     FreeIpa Docker <docker/freeipa>
     LDAP Docker <docker/ldap>
     CKAN Docker <docker/ckan>
     Superset Docker <docker/superset>
     Metabase Docker <docker/metabase>
     JupyterHub Docker <docker/jupyter>
+..     CatalogManager <../microservices/catalog-manager>
+..     SecurityManager <../microservices/security-manager>
+..     FrontendManager <../microservices/frontend-manager>
+
