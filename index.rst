@@ -18,5 +18,5 @@ Contents:
     Big Data Platform <bigdataplatform/index>
     Data Management <datamgmt/index>
     Microservices <microservices/index>
-    Docker recipies <docker/index>
+    Installation  <installation/index>
     [ITA] Manuale utente <manutente/index>

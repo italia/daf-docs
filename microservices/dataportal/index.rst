@@ -6,4 +6,4 @@ Content:
 .. toctree::
    :maxdepth: 1
 
-    Front-end manager      <front-end-manager>
+    Front-end manager      <frontend-manager>
