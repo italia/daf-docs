@@ -23,24 +23,36 @@ There are no basic dependencies needed.
 Features Enabling Dependencies
 ------------------------------
 Connection with DataStories:
+
 * daf-dataportal-backend [put link to documentation]
 
 
 Installation Steps
 ------------------
 First of all, clone the following github repository:
-* ``$ git clone https://github.com/italia/daf-dataportal-backend``
 
+.. code-block:: bash
+
+ > $ git clone https://github.com/italia/daf-dataportal-backend
+  
 Start in Debug Mode:
-* ``$ npm install``
-* ``$ npm start``
+
+.. code-block:: bash
+
+  > npm install
+  > npm start 
 
 Start with mock server:
-* ``$ npm run mock``
+
+.. code-block:: bash
+
+  > npm run mock
 
 Start in Production Mode:
-* ``$ npm run build``
-* ``$ npm install -g serve``
-* ``$ serve -s build``
 
+.. code-block:: bash
+
+  > npm run build
+  > npm install -g serve
+  > serve -s build
 
