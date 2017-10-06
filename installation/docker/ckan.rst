@@ -5,58 +5,16 @@ Ckan
 CKAN is an open-source DMS (data management system) for powering data hubs and data portals.
 CKAN makes it easy to publish, share and use data. It powers datahub.io, catalog.data.gov and data.gov.uk among many other sites.
 
-This guide will show you how to use Docker Compose to set up and run a `Ckan <https://ckan.org/>`_
- instance which uses ldap credentials to authenticate users. In particular, you can use an openLDAP docker container or a freeIpa instance.
+This guide will show you how to use Docker Compose to set up and run a `Ckan <https://ckan.org/>`_ instance which uses ldap credentials to authenticate users. In particular, you can use an openLDAP docker container or a freeIpa instance.
 
-OpenLDAP docker compose
------------------------
+Account Management Dependency
+--------------------------
 
-This docker container allows us to start a simple LDAP server (`OpenLdap <http://www.openldap.org/>`_
-) and a client (`phpLDAPadmin <http://phpldapadmin.sourceforge.net/>`_
-). In particular, the docker compose downloads an initial database having domain *daf.test.it* and containing the user *bob* with password *password*.
+This configuration of Ckan needs an account management system to work with. We provide three different options, you will find more info on their respective sections:
 
-Clone the git project:
-
-.. code-block:: bash
-
- > git clone git@github.com:italia/daf-recipes.git
-
-Run the docker container:
-
-.. code-block:: bash
-
-  > cd ./daf-recipes/ldap
-  > docker-compose up -d
-
-Check whether dockers are running:
-
-.. code-block:: bash
-
-  > docker ps
-  e8ff9611aeff        osixia/openldap         "/container/tool/r..."   17 minutes ago      Up 17 minutes       0.0.0.0:389->389/tcp, 0.0.0.0:636->636/tcp   ldap
-  6a0d0d6c3b9a        osixia/phpldapadmin     "/container/tool/run"    17 minutes ago      Up 17 minutes       0.0.0.0:80->80/tcp, 443/tcp                  phpldapadmin
-
-**Note**
-
-The docker compose requires that ports 80, 636 and 389 are available. If not, change them.
-
-
-Now, open your favorite browser and type *http://localohost*. Login as *cn=admin,dc=example,dc=org* and password *admin* to navigate inside.
-
-.. image:: imgs/ldap_login.png
-   :scale: 50 %
-   :alt: alternate text
-   :align: right
-
-.. image:: imgs/ldap_tree.png
-   :scale: 50 %
-   :alt: alternate text
-   :align: right
-
-FreeIpa Instance
------------------------
-We installed a FreeIpa server which can be used for test purposes. It can be reached to the address *91.206.129.245*
-
+* Local LDAP Docker
+* Local FreeIPA Docker (works only with linux)
+* Remote FreeIpa Server
 
 Ckan docker compose
 -----------------------
