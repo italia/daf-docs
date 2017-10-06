@@ -106,7 +106,7 @@
                 <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                     {% block menu %} {# The singlehtml builder doesn't handle this toctree call when the toctree is empty. Skip building this for now. #}
                     {% if 'singlehtml' not in builder %}
-                      {% set global_toc = toctree(maxdepth = theme_navigation_depth|int, collapse = False, includehidden = False) %}
+                      {% set global_toc = toctree(maxdepth = theme_navigation_depth|int, collapse = True, includehidden = False) %}
                     {% endif %}
                     {% if global_toc %}
                       {{ global_toc }}
@@ -172,7 +172,7 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT: '{{ url_root }}',
             VERSION: '{{ release|e }}',
-            COLLAPSE_INDEX: false,
+            COLLAPSE_INDEX: true,
             FILE_SUFFIX: '{{ '' if no_search_suffix else file_suffix }}',
             HAS_SOURCE: {{ has_source|lower }},
             SOURCELINK_SUFFIX: '{{ sourcelink_suffix }}'
