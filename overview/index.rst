@@ -2,7 +2,7 @@
 Overview
 ********
 
-The DAF is an open source project designed to be the big data analitics
+The DAF is an open source project designed to be the big data analytics
 framework for the entire Public Administration of a country.
 
 Consequently, it is designed to:
@@ -30,7 +30,7 @@ Other users of the DAF are:
 * the world of research and innovation. Thanks to the DAF, it is possible to promote initiatives to involve the world of research and innovation on issues of public interest.
 
 The DAF is based on a security system, access management and data separation that allows you to manage data access permissions.
-In this way, all DAF features will be exposed to all types of users mentioned above, which will have access to the data for which the user profile has the right to access.
+This way, all DAF features will be exposed to all types of users mentioned above. Users will only have access to the data for which the user profile they belong to has been granted access rights.
 
 The following image provides an high-level architectural overview of the DAF:
 
