@@ -7,6 +7,7 @@ What it is?
 ===========
 
 The Dataportal-private [put link]  is the webapp to access functionalities of DAF, like:
+
 * **Ingestion** Form to add dataset with metadata
 * **Business Intelligence** with Superset (AirBnB)
 * **Graphs** with Metabase
@@ -28,7 +29,7 @@ Basic Dependencies
 * SecurityManager [put link to documentation]
 
 Features Enabling Dependencies
-------------------------------:
+------------------------------
 * Superset [put link to docker documentation]
 * Metabase [put link to docker documentation]
 * JupyterHub [put link to docker documentation]
@@ -39,18 +40,29 @@ Features Enabling Dependencies
 Installation Steps
 ------------------
 First of all, you need to clone the following github repository:
-* ``$ git clone https://github.com/italia/daf-dataportal``
+
+.. code-block:: bash
+  
+  > git clone https://github.com/italia/daf-dataportal
 
 Start in Debug Mode:
-* ``$ npm install``
-* ``$ npm start``
+
+.. code-block:: bash
+
+  > npm install
+  > npm start
 
 Start with mock server:
-* ``$ npm run mock``
+
+.. code-block:: bash
+
+  > npm run mock
 
 Start in Production Mode:
-* ``$ npm run build``
-* ``$ npm install -g serve``
-* ``$ serve -s build``
 
+.. code-block:: bash
+
+  > npm run build
+  > npm install -g serve
+  > serve -s build
 
