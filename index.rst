@@ -6,6 +6,14 @@
 Data & Analytics Framework (DAF) - Developer Documentation
 ============================================================
 
+.. NOTE::
+
+  This documentation refers to the Alpha version of the DAF
+  (released in October 2017) and it is daily updated and improved.
+  For comments and enhancement requests about the documentation please open
+  an issue on `Github <https://github.com/italia/daf-docs>`_.
+
+
 Contents:
 
 .. toctree::
