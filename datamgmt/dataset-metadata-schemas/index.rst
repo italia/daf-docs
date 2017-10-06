@@ -1,43 +1,31 @@
 Datasets - Metadata & Schemas in DAF
 ====================================
 
-`Dataset <../dataset/>`__ is the most important entity designed and
-implemented in DAF. As already described datasets can be of three types
-(*standard*, *ordinary* and *raw*). These three types have different
-sets of rules and info required, more stringent for the *standard
-datasets*, less for *ordinary*, lower for *raw*.
+`Dataset <../dataset/>`__ is the main concept of DAF. The two main types of datasets have different
+required sets of rules and information, more stringent for the *standard
+datasets*, less for *ordinary*.
 
 Several *metadata* can be used to describe a dataset. Some metadata are
 useful to implement search/discovery mechanisms, others provides
 operational information.
 
-Generally speaking, metadata are of three macro types in DAF:
+Generally speaking, metadata are of three macro types:
 
--  **DCATAP**: this kind of metadata characterizes the 'semantics' of
-   the dataset. Here are contained info about theme and category of the
-   topic described in the dataset, geographic location info, who
-   produced the dataset, its title and description, and so on. DCATAP
-   refers to the `Data Catalogue Application
+-  **DCAT-AP(_IT)**: this kind of metadata defines a standard way to specify descriptive information of the datasets. It defines metadata about theme, geographic location, who
+   produced the dataset, who is responsible of the dataset, title and description of the dataset, and so on. DCAT-AP_IT is the Italian extension of the European metadata profile DCAT-AP `Data Catalogue Application
    Profile <https://joinup.ec.europa.eu/asset/dcat_application_profile/description>`__.
-   You'll find the `DCATAP schema here <md-dcatapit.json>`__ and an
-   `example application here <example/metadata/data-dcatapit.json>`__
--  **DataSchema**: information about the features and the associated
+-  **DataSchema**: this type of metadata involves the data content. Thus, it regards features and the associated
    type, optional constraints on the values that the features can take,
    as well as semantic information, optional theme and categories of
    each features.
-   You'll find the `DataSchema schema here <md-dataschema.json>`__ and
-   an `example application
-   here <example/metadata/data-dataschema.json>`__
--  **Operational**: information related to the back-end, such as:
+   .. You'll find the `DataSchema schema here <md-dataschema.json>`__ and an `example application here <example/metadata/data-dataschema.json>`__
+-  **Operational**: this type of metadata is related to the operational back-end, such as:
    dataset uri, physical storage url, standard schema conversion,
    transformation pipeline, associated API for retrieval and ingestion,
    etc.
-   You'll find the `Operational schema here <md-operational.json>`__ and
-   an `example application
-   here <example/metadata/data-operational.json>`__
+   .. You'll find the `Operational schema here <md-operational.json>`__ and an `example application here <example/metadata/data-operational.json>`__
 
-In practice, the DAF platform relies on a schema and metadata framework
-based on three concepts:
+In practice, the Big Data platform relies on a schema and metadata framework based on three concepts:
 
 -  standard schema
 -  conversion schema
@@ -52,29 +40,29 @@ A standard schema declares the existence of a specific standard dataset
 and contains a set of information describing its structure and content.
 
 More precisely, a standard schema defines all the rules and details that
-a data sources must oblige to if it wants to belong to a specific
+a data source must oblige to if it wants to belong to a specific
 standard dataset.
 
 For example, let's imagine we want to build a standard dataset
 describing the phenomena "Bike Sharing" and let's suppose that we have
 multiple data sources each of which collecting bike sharing data for a
-specific geographic area (e.g. towns). In order to be eligible to insert
+specific geographic area (e.g. a town). In order to be eligible to insert
 their data into the "Bike Sharing" standard dataset, each data source
 must provide data according to the rules defined in the related standard
 schema defined by the DAF owner. The resulting dataset will then be able
 to describe a unique phenomena in a consistent way across multiple data
 sources. The latter have two options: either providing data following
-exactly the same schema defined in the standard schema; or to provide
-the minimum set of info required and a set conversion info with which
+exactly the same schema defined in the standard schema or providing
+the minimum set of required information and a set conversion information with which
 the platform will be able to convert the original schema to the standard
-one. In both cases, the tool to do so is the conversion schema described
+one. In both cases, the tool to do so uses the conversion schema described
 in the next section.
 
-Summarizing, a standard schema provides the following info:
+Summarizing, a standard schema provides the following information:
 
--  specific information on the dataset that are not contained in
-   DCAT\_AP.
--  The list of required fields, with information, among the other, about
+-  specific information on the dataset that is not contained in
+   DCAT-AP_IT.
+-  the list of required fields, with information, among the other, about
    their format, constraints if any, nature (e.g. measure or a
    dimension), domain specific info that will help the programmatic use
    of the data in specific contexts.
