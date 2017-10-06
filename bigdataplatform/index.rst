@@ -16,12 +16,10 @@ The DAF Big Data platform also enable *redistributing datasets, developing data 
 by mean of the above mentioned tools provided by the `Dataportal <../dataportal>`_: by these tools, data scientists and analysts can perform analysis on data, run statistical and machine learning models, and produce data
 visualizazions and reports.
 
-The DAF Big Data platform is developed by adopting a `Micro-service Architecture pattern <http://microservices.io/patterns/microservices.html>`_.
 For more information, continue your tour looking at:
 
 .. toctree::
    :maxdepth: 1
 
     Big Data Architecture <architecture/index>
-    Microservices <../microservices/index>
     Security & Privacy issues <security/index>

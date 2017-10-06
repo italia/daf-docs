@@ -13,12 +13,10 @@ Contents:
 
     Introduction <introduction/index>
     Overview <overview/index>
-    Dataset Abstraction <concepts/index>
+    Concepts <concepts/index>
     Data Portal <dataportal/index>
     Big Data Platform <bigdataplatform/index>
     Data Management <datamgmt/index>
-    DAF Technologies Ecosystem <ecosystem/index>
-    Microservices (work in progress) <microservices/index>
-    Docker recipies (work in progress) <docker/index>
-    Playground (work in progress) <playground/index>
+    Microservices <microservices/index>
+    Docker recipies <docker/index>
     [ITA] Manuale utente <manutente/index>
