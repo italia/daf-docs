@@ -1,16 +1,14 @@
 
-This is the list of all microservices
-======================================
+List of microservices
+=====================
 
-Contents:
+The DAF Big Data platform is developed by adopting a `Micro-service Architecture pattern <http://microservices.io/patterns/microservices.html>`_.
+This is the list of the developed microservices:
 
 .. toctree::
    :maxdepth: 2
 
-    Catalog Manager     <catalog-manager>
-    OntonetHub          <ontonethub>
-    Security Manager    <security-manager>
-    Semantic Manager    <semantic-manager>
-    Semantic Repository <semantic-repository>
-    Semantic Validator  <semantic-validator>  
-    Microservice Doc Template <example-microservice>
+   Core microservices  <core/index>
+   Dataportal microservices <dataportal/index>
+   Semantic microservices <semantic/index>
+.. 
