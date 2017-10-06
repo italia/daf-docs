@@ -105,8 +105,7 @@ such as:
 -  to get the dataset schema in a given format (e.g. AVRO);
 -  to create a new dataset based on an existing one but saved into a
    different storage mechanism or based on a transformation of the
-   existing dataset [not sure on this one yet, maybe this should be
-   managed by the catalog manager?], etc.
+   existing dataset, etc.
 
 For a list of endpoints and functionalities currently provided by the
 DatasetManager see the `DatasetManager API &
