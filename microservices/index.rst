@@ -12,5 +12,5 @@ Contents:
     Security Manager    <security-manager>
     Semantic Manager    <semantic-manager>
     Semantic Repository <semantic-repository>
-    Semantic Validator  <semantic-repository>  
+    Semantic Validator  <semantic-validator>  
     Microservice Doc Template <example-microservice>
