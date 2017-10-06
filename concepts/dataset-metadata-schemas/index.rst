@@ -1,4 +1,4 @@
-Datasets - Metadata & Schemas in DAF
+Metadata & Schemas
 ====================================
 
 `Dataset <../dataset/>`__ is the main concept of DAF. There exist two types of datasets each having different required sets of rules and information, more stringent for the *standard* datasets, less for *ordinary* datasets.
