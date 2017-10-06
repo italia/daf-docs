@@ -1,30 +1,30 @@
- 
+
 Semantic Repository
 ============================================================
 
-What is?
-----------
-
-**Semantic Repository** is the microservice designed to provide basic functionalities for managing ontologies/vocabularies 
+**Semantic Repository** is the microservice designed to provide basic functionalities for managing ontologies/vocabularies
 (and data, in the future) using the the well-know [RDF4J](http://rdf4j.org/) interface as an abstraction over triplestores.
 The idea is to have a list of core functionalities for a catalog service of queryable ontologies, which can be implemented over an external triplestore, and it will evolve accordingly.
 
-
-Install Standalone.
---------------------
+Local Installation
+------------------
+- Pre-requisites: JDK 8, SBT, GIT client
 - git clone https://github.com/italia/daf-repository
 - cd daf-semantics/semantic_repository
 - sbt docker:publishLocal
 - sbt run
 - connect to http://localhost:9000
 
-You should see a swagger ui with all endpoints described. 
+You should see a swagger ui with all endpoints described.
 
 To test the endpoints I suggest to use a tool similar to `Postman <https://www.getpostman.com/>`_
 
+DAF integration note
+--------------------
+[TBD]
 
 Endpoints
--------------------
+---------
 
 There is a list of basic endpoints:
 
@@ -39,4 +39,3 @@ There is a list of basic endpoints:
 
 
 Detailed informations about the service can be found `here <https://github.com/italia/daf-semantics/tree/master/semantic_repository>`_
-
