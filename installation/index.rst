@@ -8,6 +8,9 @@ In general, components developed internally are available via github repositorie
 
 Several components are dependent to LDAP and/or FreeIPA. In this case, we offer you three alternatives: a dockerized LDAP, a remote FreeIPA test server, or a dockerized FreeIPA (working with Linux only at the moment). All of them will have test accounts already created for you.
 
+The best way to have everything installed and properly configured is to use the Virtual Machine you can download at the following url: https://drive.google.com/file/d/0Bzp1CVf8pK-yRGhsMGdTMDJDZkU/view?usp=sharing
+
+In case you have problems to download the Virtual Machine, or you want to run only few components, please follow the component installation guide you find at the links below.
 
 .. toctree::
    :maxdepth: 1
