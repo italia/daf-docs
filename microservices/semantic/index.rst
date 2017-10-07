@@ -1,7 +1,7 @@
 
 Semantic microservices
 ======================
-Content:
+The semantic part of the DAF consists of the following microservices:
 
 .. toctree::
    :maxdepth: 1

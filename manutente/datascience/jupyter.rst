@@ -62,12 +62,12 @@ Cliccare nel tab 'Add Endpoint' e inserire le seguenti informazioni:
 Cliccando il pulsante 'Add Endpoint' la configurazione sarà aggiunta al notebook.
 
 Dopo aver configurato correttamente la connessione al server Livy sarà possibile creare una *SparkSession*.
-Per fare ciò: 
+Per fare ciò:
 
-* selezionare il tab 'Create Session'; 
-* scegliere nel menu a tendina 'Endpoint' l'endpoint appena configurato (http://livy:8998); 
-* dare un nome alla sessione che si sta creando valorizzando il campo 'Name'; 
-* selezionare il linguaggio che si intende usare nel notebook (ad esempio 'scala'); 
+* selezionare il tab 'Create Session';
+* scegliere nel menu a tendina 'Endpoint' l'endpoint appena configurato (http://livy:8998);
+* dare un nome alla sessione che si sta creando valorizzando il campo 'Name';
+* selezionare il linguaggio che si intende usare nel notebook (ad esempio 'scala');
 * cliccare il pulsante 'Create Session'.
 
 Il sistema impiegherà qualche decina di secondi per attivere il collegamento con il cluster Spark.
@@ -83,9 +83,23 @@ Caricare un dataset
 ===================
 
 Una volta attivata con successo una sessione Spark, l'ambiente è pronto per iniziare l'attività di analisi.
-La prima cosa da fare è creare uno Spark DataFrame con il dataset che si vuole analizzare, procedendo come segue:
+La prima cosa da fare è selezionare il dataset da analizzare in :dataportal-private:`/`.
 
-* Identificare il dataset su :dataportal:`/` e tenere traccia del path e del formato indicati nella scheda informativa. Nel caso in esempio, si è scelto il dataset 'abitazioni_d_ritirate_d_e_d_ultimate_d_per_d_numero_d_stanze_d_anno_d_2013_d_4e3f6d25_63'.
+Nella barra di ricerca in alto al centro è possibile inserire del testo per fare ricerca dei dataset indicizzati.
+
+.. image:: img_jupyter/conf_dataportal_private.jpg
+
+In alternativa, inserendo '*' verranno visualizzati tutti i dataset indicizzati dal DAF.
+
+.. image:: img_jupyter/conf_dataportal_results.jpg
+
+Premendo l'icona a destra di ogni risultato si accede alla scheda informativa del dataset (immagine di seguito), dove potete individuare le `uri` per accedere al dataset selezionato utilizzando gli strumenti di datascience del DAF.
+
+.. image:: img_jupyter/conf_dataportal_details.jpg
+
+Per creare uno Spark DataFrame con il dataset che si vuole analizzare, procedendo come segue:
+
+* Identificare il dataset su :dataportal:`/` e tenere traccia del path e del formato indicati nella scheda informativa (vedi sopra). Nel caso in esempio, si è scelto il dataset 'abitazioni_d_ritirate_d_e_d_ultimate_d_per_d_numero_d_stanze_d_anno_d_2013_d_4e3f6d25_63'.
 * Eseguire nel notebook il seguente comando, che chiede a Spark di creare un nuovo DataFrame contenente il dataset specificato:
 
 .. code-block:: scala
