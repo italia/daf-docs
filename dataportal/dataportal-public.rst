@@ -24,7 +24,7 @@ Features Enabling Dependencies
 ------------------------------
 Connection with DataStories:
 
-* daf-dataportal-backend [https://github.com/italia/daf-dataportal-backend]
+* [daf-dataportal-backend] (https://github.com/italia/daf-dataportal-backend)
 
 
 Installation Steps
