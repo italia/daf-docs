@@ -455,7 +455,7 @@ extlinks = {
     'dataportal': ('http://dataportal.daf.teamdigitale.it', 'http://dataportal.daf.teamdigitale.it'),
     'dataportal-private': ('http://dataportal-private.daf.teamdigitale.it', 'https://dataportal-private.daf.teamdigitale.it'),
     'superset': ('http://supersetd.default.svc.cluster.local:8088', 'http://superset.daf.italia.it'),
-    'dafpubblico': ('https://dataportal.daf.teamdigitale.it/', 'https://dataportal.daf.teamdigitale.it/'),
+    'dafpubblico': ('http://daf.italia.it', 'http://daf.italia.it'),
     'dafprivato': ('http://daf.italia.it/dataplatform', 'http://daf.italia.it/dataplatform'),
     'example': ('http://url.it/%s', 'Shown URL')
 }
