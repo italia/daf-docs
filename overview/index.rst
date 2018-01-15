@@ -1,9 +1,7 @@
-********
 Overview
-********
+========
 
-The DAF is an open source project designed to be the big data analytics
-framework for the entire Public Administration of a country.
+The DAF is an open source project meant to manage the data of Public Administration of a country.
 
 Consequently, it is designed to:
 
@@ -19,9 +17,6 @@ The DAF is intended to support Public Administrations in developing:
 * data applications to improve public services and internal processes;
 * innovative non-critical services for citizens and businesses.
 
-The DAF also promotes the standardization open data dataset providing
-functionalities to map custom data schemas to standard data schemas.
-
 Other users of the DAF are:
 
 * data journalists looking for information to support their journalistic theses;
@@ -29,8 +24,7 @@ Other users of the DAF are:
 * community of hackers, developers, and companies that use the tools to create value-added applications and services;
 * the world of research and innovation. Thanks to the DAF, it is possible to promote initiatives to involve the world of research and innovation on issues of public interest.
 
-The DAF is based on a security system, access management and data separation that allows you to manage data access permissions.
-This way, all DAF features will be exposed to all types of users mentioned above. Users will only have access to the data for which the user profile they belong to has been granted access rights.
+The DAF is based on a security system, access management and data separation that allows you to manage data access permissions. In this way, all DAF features will be exposed to all types of users mentioned above. Users will only have access to the data for which the user profile they belong to has been granted access rights.
 
 The following image provides an architectural snapshot of the DAF architecture:
 
@@ -40,7 +34,16 @@ In a few words, the DAF platform integrates:
 
 * front-end applications (dataportal-public and dataportal-private);
 * front-end open source platforms, developed by third-parties (e.g. Metabase, Superset, Jupiter, CKAN);
-* back-end open source big data platforms and technologies (e.g. OpenTsdb, Livy, Nifi, etc.)
-* several software components developed to manage all underlying DAF mechanisms (e.g. Catalog Manager, Ingestion Manager, etc.)
+* back-end open source big data platforms and technologies (e.g. Hadoop ecosystem, Livy, Nifi, etc.)
+* microservices to manage all underlying DAF mechanisms (e.g. Catalog Manager, Ingestion Manager, etc.)
 
 Everything is deployed on a Kubernetes cluster and relies on a Cloudera cluster.
+
+.. toctree:
+   :maxdepth: 2
+   
+   Overview <index>
+   Dataset <dataset>
+   Interoperability, Standardization and Semantic <dataset_interop>
+   End-user features: Dataportal & API <dataportal_api>
+   How DAF helps Open Data <opendata>
