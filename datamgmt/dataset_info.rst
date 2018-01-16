@@ -1,17 +1,22 @@
 More on Datasets: A Deep dive
 =============================
 
-Datasets are the center around which DAF architecture has been build. In fact, DAF provides advanced features for data governance, analysis and interoperability designed to solve typical problems faced by the public administrations and large companies. In this section we expands on what has been presented in the Overview section, to better describe how datasets are managed in DAF. What will follows is common to all datasets managed in DAF, except for some aspects related to stream of data, that will be covered into an ad hoc section.
+The notion of datasets is the main concept around which DAF architecture has been build. In fact, DAF provides advanced features for data governance, analysis and interoperability designed to solve typical problems faced by the public administrations and large companies.
+In this section we expand on what has been presented in the Overview section, to better describe how datasets are managed in DAF. What will follows is common to all datasets managed in DAF, except for some aspects related to data streams, that will be covered into an ad-hoc section.
 
-In what follows, a dataset is defined as a combination of data and metadata. Data is the actual content of the dataset, and can be organized into tabular, json and text formats. Metadata are all the information about the dataset that describe and give context to its contect. Metadata will be treated in details in an appropriate section.
+Formally, we define a dataset
+  *as a combination of data and metadata.*
+
+* **Data** is the actual content of the dataset, and can be organized into tabular, json and text formats.
+* **Metadata** are all the information about the dataset that describe and give context to its contect. Metadata will be treated in details in an appropriate section.
 
 
 Ordinary Dataset
 ----------------
 
-Every datasets that are ingested by an organization (PA) are treated as **ordinary dataset**. Ordinary dataset does not have a pre-defined structure they need to follow, they are ingested as they come, besides the standardization, normalization and enrichment processes defined in the ingestion pipeline. 
+Every datasets that are ingested by an organization (PA) are treated as **ordinary dataset**. An ordinary dataset does not have a pre-defined structure it needs to follow, it is ingested as it come, besides the standardization, normalization and enrichment processes defined in the ingestion pipeline.
 
-They will have the following data structure:
+It will have the following data structure:
 
 * standardized & normalized original columns
 * raw original columns
@@ -25,7 +30,7 @@ Ordinary datasets can be created from data coming from outside DAF, or by transf
 
 Storage & other conventions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Ordinary datasets are stored by default in HDFS in parquet format and exposed as Hive and Impala tables. Data will be physically stored in the following HDFS directory: 
+Ordinary datasets are stored by default in HDFS using the Parquet data format and exposed as Hive and Impala tables. Data will be physically stored in the following HDFS meta-directory:
 
 ``/daf/ordinary/{organization}/{domain}_{subdomain}/{dataset name}/{version}``
 
@@ -44,7 +49,8 @@ As convention, DAF manages a system of logical uri by which a dataset can be uni
 Standard Datasets
 -----------------
 
-Standard Datasets are those datasets that describe concepts and phenomena valid nationwide, following a strict data structure and semantics rules. In fact, standard datasets are said to follow 'standards' that are defined for all PAs to follow, so to guarantee that a given phenomena is described in the same way and following the same conventions nationwide. Data will be physically stored in the following HDFS directory:
+Standard Datasets are those datasets that describe concepts and phenomena valid nationwide, following a strict data structure and semantics rules. Standard datasets are said to follow 'standards' that are defined for all PAs, so to guarantee that a given phenomena can be described in the same way and following the same conventions nationwide.
+Data will be physically stored in the following HDFS meta-directory:
 
 They will typically have the following data structure:
 
@@ -62,7 +68,7 @@ Dataset standards can be created directly by a PA, if it is the only contributor
 
 Storage & other conventions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Standard datasets are stored by default in HDFS in parquet format and exposed as Hive and Impala tables. Data will be physically stored in the following HDFS directory: 
+Standard datasets are stored by default in HDFS in parquet format and exposed as Hive and Impala tables. Data will be physically stored in the following HDFS directory:
 
 ``/daf/standard/{domain}__{subdomain}/{dataset name}/{version}``
 
@@ -73,6 +79,6 @@ Raw Open Data
 -------------
 Finally, we collect and store raw open data coming from the national catalog. They are automatically metadated based on the info available (in 'at best' fashion), and stored in HDFS in the following path:
 
-``//daf/opendata/{organization}/{dataset name}``
+``/daf/opendata/{organization}/{dataset name}``
 
 Once ingested, they can be used with all other tools managed by DAF.
