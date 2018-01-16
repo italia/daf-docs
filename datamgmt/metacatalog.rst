@@ -45,17 +45,22 @@ Data scructure metadata contains information about the internal structure of a d
 * ``metadata.tag``: list of tags that can better represent the content of the field. All tags are saved into an evolving vocabulary.
 * ``metadata.constr``: a list of objects (made by ``type`` and ``param`` arguments) to set contraints on the content of the field.
 * ``metadata.semantics``: an object containing semantic info to link hte column to related ontology and controlled vocabulary, if any. In particular:
+  
   * ``id``: this is the semantic tag that links the column with a given attribute of a concept described into an ontology.
   * ``context``: (or Subject) it is used to give a better context to the info contained in the column. Technically, it is a tag for a concept described into an ontology. In most cases, it can be seen as the subject that makes an action, derived from the id attribute.
   * ``predicate``: [TBA] the action that the subject perform on the content of the column.
   * ``voc``: it is  a semantic tag associating the column to a given controlled vocabulary, if it exists. This tag contains also info about the hierarchy of the vocabulary used.
+
 * ``metadata.uniq_dim``: checked if the column is part of the list of dimensions that make the row unique, such that there will not be two rows with the same values for the columns checked as ``uniq_dim``.
 * ``metadata.personal``: this objects contains info whether the data are of personal kind. In particular:
- * ``ispersonal``: boolean, to tell whether or not the info contained in the column is a personaltype of information.
- * ``cat``: category of personal information
+
+  * ``ispersonal``: boolean, to tell whether or not the info contained in the column is a personaltype of information.
+  * ``cat``: category of personal information
+
 * ``metadata.format_std``: this is an object that gives info about a format standard the data follows when ingested in DAF. It is useful to help the system identify such standard and transform into the DAF choosen standard. The object has the following two attributes:
- * ``name``: name of the format standard, e.g. date, credit card, address, etc.
- * ``param``: depending on the type of format, it is a string giving the exact formatting order and composition of the information contained. E.g. for the date example, it may be 'YY/MM/DD'. This will help the normalization procedure to refactor in the right order and format the information, such to follow the DAF internal conventions. 
+ 
+  * ``name``: name of the format standard, e.g. date, credit card, address, etc.
+  * ``param``: depending on the type of format, it is a string giving the exact formatting order and composition of the information contained. E.g. for the date example, it may be 'YY/MM/DD'. This will help the normalization procedure to refactor in the right order and format the information, such to follow the DAF internal conventions. 
 
 
 Operational level metadata

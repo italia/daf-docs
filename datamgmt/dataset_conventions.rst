@@ -9,30 +9,33 @@ DAF Conventions List
 
 * **Data format** (Normalization): all data is transformed into UFT-8 format
 * **Data conventions** (Normalization): we make use of the following interal conventions to help both interoperability and automation
-  * *null value* are saved as `NULL`. Therefore, all other external conventions used in the raw incomind data (i.e. empty string) are transformet to `NULL`
-  * *date* are transformed using the ISO8601 in `YYYY-MM-DD hh:mm:ss`
-  * *url* are formatted as following `http[s]://www.yoururl.com`
+  
+  * *null value* are saved as ``NULL``. Therefore, all other external conventions used in the raw incomind data (i.e. empty string) are transformet to ``NULL``
+  * *date* are transformed using the ISO8601 in ``YYYY-MM-DD hh:mm:ss``
+  * *url* are formatted as following ``http[s]://www.yoururl.com``
   * *normalization vocabularies* are used to normalize special cases that will be continuously added to ad hoc vocabularies, such as accented letters, specific names, etc. The terms in the vocabularies are substituted with the appropriate translation, and this will be done both for all dataset (general normalization vocabularies), or for owner/dataset (source normalization vocabularies and dataset normalization vocabularies).
   * *address* written in a single cell, is interpreted (when possible) and rearranged as follows: `{address type} {address name}, {civic number}, {zip code} {City} ({Provincia/State}), Country`. The system recognize it as address, via semantic tag.
 
-* *new columns from enrichment* are named as following: `__{enrichment type}[_{column name}]`, where text in  `{}` is mandatory, and text in `[]` is optional and depends on the type of transformation (some are not connected to an existing column)
-  * a  *unique row id* (Enrichment) is added via a new column called `__ROWID` to ensure global uniqueness of the id within DAF. It is made as following: `{dataset name space}_{row hash}` [TBD]
-  * a *generated datetime* (Enrichment) is added with the timestamp of the ingestion in a column called `__dtcreated`
-  * a *updated datetime* (Enrichment) is added with the timestamp of the last update for that row in a column called `__dtupdate`
-  * a *controlled vocabulary standardization* (Standardization) columns is added everytime there is a feature/column that is tagged to have a controlled vocabulary associated (the tagging happens in the Catalog Manager, at metadata level). In this case, a procedure is activated to check whether the values contained in the column obey to the vocabulary. This will result in the addition of two columns: `__std_{col name}` will have the value of the original column in case they are found in the vocabulary, or the closest value (according to some distance metrics like the Levenshtein distance) in case the value is not exactly found; `__stdtat_{col name}` containing the distance between the original value and the closest one found in the vocabulary. Be aware that the final dataset will not contain the `__std_{col name}` column, as its value will be put in a column named with the original name `{col name}`. The `__std_{col name}` column is used in intermediate steps of the ingestion process. 
-  * a *unique identifier / code* (Enrichment) for the standardized columns, in case the controllev vocabulary has a `code` associated to the standard lable. This column will be called `__stdcode_{column name}`
+* *new columns from enrichment* are named as following: ``__{enrichment type}[_{column name}]``, where text in  ``{}`` is mandatory, and text in ``[]`` is optional and depends on the type of transformation (some are not connected to an existing column)
+ 
+  * a  *unique row id* (Enrichment) is added via a new column called ``__ROWID`` to ensure global uniqueness of the id within DAF. It is made as following: ``{dataset name space}_{row hash}`` [TBD]
+  * a *generated datetime* (Enrichment) is added with the timestamp of the ingestion in a column called ``__dtcreated``
+  * a *updated datetime* (Enrichment) is added with the timestamp of the last update for that row in a column called ``__dtupdate``
+  * a *controlled vocabulary standardization* (Standardization) columns is added everytime there is a feature/column that is tagged to have a controlled vocabulary associated (the tagging happens in the Catalog Manager, at metadata level). In this case, a procedure is activated to check whether the values contained in the column obey to the vocabulary. This will result in the addition of two columns: ``__std_{col name}`` will have the value of the original column in case they are found in the vocabulary, or the closest value (according to some distance metrics like the Levenshtein distance) in case the value is not exactly found; ``__stdtat_{col name}`` containing the distance between the original value and the closest one found in the vocabulary. Be aware that the final dataset will not contain the ``__std_{col name}`` column, as its value will be put in a column named with the original name ``{col name}``. The ``__std_{col name}`` column is used in intermediate steps of the ingestion process. 
+  * a *unique identifier / code* (Enrichment) for the standardized columns, in case the controllev vocabulary has a ``code`` associated to the standard lable. This column will be called ``__stdcode_{column name}``
   * *address components* (Enrichment): every time there is a column/field tagged as address, this enrichment step will add the following columns inferred from it:
-    * `__address@placetype_{column name}`: it contains the type of address (i.e. via, piazza, viale, ecc.) contained in the address from the column `{column name}`  
-    * `__address@placename_{column name}`: it contains the name of the address (i.e. 'del Corso') contained in the address from the column `{column name}`  
-    * `__address@placecode_{column name}`: it contains the code (unique identifier) of the address from its controlled vocabulary.
-    * `__address@cityname_{column name}`: it contains the name of the city of the address from its controlled vocabulary.
-    * `__address@citycode_{column name}`: it contains the code (unique identifier) of the city from its controlled vocabulary.
-    * `__address@provname_{column name}`: it contains the name of the 'provincia' or state  of the address from its controlled vocabulary.
-    * `__address@provcode_{column name}`: it contains the code (unique identifier) of the 'provincia' or state from its controlled vocabulary.
-    * `__address@countryname_{column name}`: it contains the name of the country of the address from its controlled vocabulary.
-    * `__address@countrycode_{column name}`: it contains the code (unique identifier) of the country from its controlled vocabulary.
-    * `__address@lat_{column name}`: it contains the latitude of the address.  
-    * `__address@lon_{column name}`: it contains the longitude of the address.
+
+    * ``__address@placetype_{column name}``: it contains the type of address (i.e. via, piazza, viale, ecc.) contained in the address from the column ``{column name}``  
+    * ``__address@placename_{column name}``: it contains the name of the address (i.e. 'del Corso') contained in the address from the column ``{column name}``  
+    * ``__address@placecode_{column name}``: it contains the code (unique identifier) of the address from its controlled vocabulary.
+    * ``__address@cityname_{column name}``: it contains the name of the city of the address from its controlled vocabulary.
+    * ``__address@citycode_{column name}``: it contains the code (unique identifier) of the city from its controlled vocabulary.
+    * ``__address@provname_{column name}``: it contains the name of the 'provincia' or state  of the address from its controlled vocabulary.
+    * ``__address@provcode_{column name}``: it contains the code (unique identifier) of the 'provincia' or state from its controlled vocabulary.
+    * ``__address@countryname_{column name}``: it contains the name of the country of the address from its controlled vocabulary.
+    * ``__address@countrycode_{column name}``: it contains the code (unique identifier) of the country from its controlled vocabulary.
+    * ``__address@lat_{column name}``: it contains the latitude of the address.  
+    * ``__address@lon_{column name}``: it contains the longitude of the address.
 
 Ingestion pipeline steps
 ------------------------
@@ -40,10 +43,10 @@ Ingestion pipeline steps
 The following steps describe the ingestion pipeline applying the above conventions to the infoming new data.
 
 1. New data are captured from the incoming source and stored into a landing area into DAF HDFS.
-2. **Normalization procedures** are applied to the incoming data so to apply DAF conventions. The result will be a dataset with new features/columns added named `__norm_{col name}`, containing the result of the normalization applied to all features/columns of the original dataset. 
-3. **Standardization procedures** are applied to the normalized columns of the previous step. The result will be a dataset generated a the previous step, with the addition of the standardized columns (only when the standardization can be applied, so the number of added columns may be less then the total number of columns in the original dataset (step 1.) named `__std_{col name}`.
-4. **Enrichment procedures** are applied to the dataset at step 3, resulting in a new dataset build starting from the one generated in step 3 and adding enrichment columns named as follows `__{enrichment tuype}[_{col name}]`.
-5. **Finalization procedure** takes as input the dataset in step 4 and rearrange its columns as follows: it contains the normalized and standardized columns, named as the original columns in the incoming dataset (step 1); the original raw data columns named `__raw_{col name}`, the list of enrichment columns from step 4. 
+2. **Normalization procedures** are applied to the incoming data so to apply DAF conventions. The result will be a dataset with new features/columns added named ``__norm_{col name}``, containing the result of the normalization applied to all features/columns of the original dataset. 
+3. **Standardization procedures** are applied to the normalized columns of the previous step. The result will be a dataset generated a the previous step, with the addition of the standardized columns (only when the standardization can be applied, so the number of added columns may be less then the total number of columns in the original dataset (step 1.) named ``__std_{col name}``.
+4. **Enrichment procedures** are applied to the dataset at step 3, resulting in a new dataset build starting from the one generated in step 3 and adding enrichment columns named as follows ``__{enrichment tuype}[_{col name}]``.
+5. **Finalization procedure** takes as input the dataset in step 4 and rearrange its columns as follows: it contains the normalized and standardized columns, named as the original columns in the incoming dataset (step 1); the original raw data columns named ``__raw_{col name}``, the list of enrichment columns from step 4. 
     
 
 Dataset Final Structure

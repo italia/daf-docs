@@ -16,9 +16,10 @@ They will have the following data structure:
 * standardized & normalized original columns
 * raw original columns
 * enrichment columns, among which (most of them will depend on the content of the original columns):
-  * `__ROWID`: global unique row id
-  * `__dtcreated`: date and time when the info has been added
-  * `__dtupdated`: date and time when the info has been updated
+
+  * ``__ROWID``: global unique row id
+  * ``__dtcreated``: date and time when the info has been added
+  * ``__dtupdated``: date and time when the info has been updated
 
 Ordinary datasets can be created from data coming from outside DAF, or by transformations applied to already existing DAF datasets. For example, a public administration can decide to create an open data version of a private dataset, by indicating the columns that can be released publicly and an optional aggregation policy. In this way, everytime the private dataset receives updates, they will be automatically be reflected into its open data version (that will be another dataset in the DAF world).
 
@@ -51,6 +52,7 @@ They will typically have the following data structure:
 * standardized and normalized optional columns, grouped under the ``opt.{colname}`` struct field
 * enrichment columns from the ingestion procedures, grouped under the ``enr.{colname}`` struct field
 * operational enrichment columns, with info needed for internal DAF operations and grouped under the ``ops.{colname}`` struct fields. These fields are:
+
   * ``__dtcreated``: date time when the info has been ingested into the standard dataset
   * ``__dtupdated``: date time when the info has been updated
   * ``__srcorg``: the code name of the organization that originated the data (e.g. 'Comune_Milano')

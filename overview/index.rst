@@ -39,11 +39,13 @@ In a few words, the DAF platform integrates:
 
 Everything is deployed on a Kubernetes cluster and relies on a Cloudera cluster.
 
-.. toctree:
-   :maxdepth: 2
+
+
+.. toctree::
+   :maxdepth: 1
    
    Overview <index>
-   Dataset <dataset>
+   Dataset concept <dataset>
    Interoperability, Standardization and Semantic <dataset_interop>
    End-user features: Dataportal & API <dataportal_api>
    How DAF helps Open Data <opendata>

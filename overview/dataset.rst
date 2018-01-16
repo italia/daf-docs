@@ -1,5 +1,5 @@
-Dataset
-=======
+Dataset Concept
+===============
 
 The main aim of DAF is to provide a framework to manage data, regardless on their dimension and nature (from small vocabulary tables to big unstructured data). That's why we designed the DAF around an abstraction of the concept of *dataset*. The DAF is based on an abstraction of the concept of *dataset*: potentially interconnected logical entities, made of metadata, data, storage options and "interactivity" capabilities. We tried to shape it to be generic enough to model both batch and streaming, structured, semi-structured and unstructured content. 
 
@@ -14,6 +14,7 @@ Datasets follows a standard lifecycle path, regardless on their nature and typol
 * **Ingestion**: after the dataset entity has been created, a microservice activates an Apache NiFi pipeline that is listening for new data to ingest.DAF is currently ready to ingest data coming from SFTP (default option for batch data), pull and push from an external webservice.
 
 * **Transformation and enrichment pipelines**: before being stored into the appropriate storage engine, the data goes through several pipelines that add information to the incoming data. We are currently developing the following two pipelines:
+  
   * **Normalization pipeline**, to apply DAF internal conventions to raw incoming data, such as format (UTF-8), management of null entries, refactoring of codified fields like date and url, and so on.
   * **Standardization pipeline**, to make sure that fields marked as bound to a controlled vocabulary (via semantic annotation made during the dataset entity creation phase) are actually using the terms present in the vocabulary.
 All pipelines are thought to enrich the incoming raw data, so not to modify the original content: the steps described above add new fields with the result of the transformation applied and, when applicable, an information about the "goodness" of the transformation applied.
