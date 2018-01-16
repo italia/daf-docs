@@ -16,31 +16,38 @@ developed in the context of the activities planned by the
 Italian `Three-Year Plan for ICT in Public Administration 2017 - 2019 <https://pianotriennale-ict.readthedocs.io/en/latest/>`_,
 approved by the Italian Government in the 2017.
 
-In this scenario, the main goal of the DAF is to promote the exchange of
-public data between Italian PAs, to support the diffusion of open data,
-and to enable data-driven policies.
-The Italian instance of the DAF is developed and maintanied by a **Data Team** composed by data scientists and data engineers,
-which uses and evolves the framework to analyze data, create machine learning models and build data applications and data visualization products.
+The DAF project is an attempt to establish a centrl Chief Data Officer for the Government and Public Administration. Its main goal is to promote the exchange of data between Italian Public Administrations (PAs), to support the diffusion of open data, and to enable data-driven policies. The framework is composed by three building blocks:
 
-Anyway, the DAF is a generic enough tool to be re-used in other countries
-and other application domains. In fact, the DAF is composed by:
+* **Big Data Platform** to store in a unique repository the data of the PAs, implementing ingestion procedures to promote standardization and therefore interoperability among them. It exposes functionalities common to the Hadoop ecosystem, plus a set of (micro) services designed to improve data governance and a number of end-user tools that have been integrated with them.
+* **Team of Data Experts"** (data scientists and data engineers) that knows how to manage and evolve the platform, and provide support to PA on their analytics and data management activities in a consultancy fashion.
+* **Regulatory Framework** that institutionalizes this activity at government level, and gives the proper mandate to the PA that will manage the DAF, in compliance with privacy policy.
 
-- a **Dataportal**, a Web user interface providing:
+This documentation is focused on the **Big Data Platform**, and we'll refer to it as DAF for the sake of simplicity.
+
+The Italian instance of the DAF is developed and maintanied by the `DAF Team <https://teamdigitale.governo.it/it/projects/daf.htm>`_ (part of the Digital Transformation Team of the Italian Government)  composed by data scientists and data engineers, which uses and evolves the framework to analyze data, create machine learning models and build data applications and data visualization products.
+
+Anyway, the DAF is a generic enough tool to be re-used in other countries and other application domains. In fact, the DAF exposes the following data management and analytics functionalities:
+
+- a **Public Dataportal**, a Web user interface providing:
 
    - a catalog of open-data datasets based on `CKAN <https://ckan.org>`_;
-   - a set of tools for data analysis and visualization;
-   - a tool to handle data ingestion, data and metadata management processes;
-   - a tool for publishing and sharing data stories.
+   - a content management system for *data stories*, posts where users can share their analysis, with possibility to integrate directly with the tools used (graphs and code);
+   - community tools to collaborate and learn how to use the platform;
 
-- a **Big Data platform** to centralize and store, manipulate and standardize and re-distribute data and insights.
+- a **Private Dataportal**, a web application with the following features:
+
+   - a catalog of all dataset the user can access;
+   - an ingestion form to govern (insert, edit, delete) dataset information and setup ingestion procedures;
+   - data visualization and dashboard tools;
+   - data science notebook;
+
+- a **Hadoop Cluster** with typical applications to centralize and store, manipulate and standardize and re-distribute data and insights;
+- a **Multy tenant** architecture, based on Kerberos and LDAP. 
 
 The DAF is under development. This is a snapshot of the roadmap:
 
 - By October 2017: Alpha release.
-- By November 2017: Beta release.
-- By December 2017: 1.0 release.
-
-Both the Alpha and Beta releases will be tested by selected communities and Italian PAs.
+- By December 2017: Alpha2 release.
 
 All contributions are welcome!
 
@@ -50,10 +57,8 @@ Contents:
    :maxdepth: 2
 
     Overview <overview/index>
-    Concepts <concepts/index>
-    Data Portal <dataportal/index>
-    Big Data Platform <bigdataplatform/index>
     Data Management <datamgmt/index>
-    Microservices <microservices/index>
+    Content Management <content/index>
+    Architecture <architecture/index>
     Installation  <installation/index>
     [ITA] Manuale utente <manutente/index>

@@ -1,22 +1,13 @@
 Data Management
 ===============
 
+This section is about dataset concept and management in DAF. You'll find info about the type of datasets managed, the logics behind datasets in DAF, ingestion pipelines and conventions used and much more.
 
 .. toctree::
   :maxdepth: 2
-  :hidden:
 
-  dataset-adding
-  data-ingestion
-  data-at-rest
-  data-in-use
-  data-insights-publication
-
-We introduce the philosophy behind the data management architecture of
-the DAF platform describing the following topics:
-
--  `Adding a new dataset <dataset-adding>`__
--  `Data ingestion <data-ingestion>`__
--  `Data at rest <data-at-rest>`__
--  `Data in use <data-in-use>`__
--  `Data and insights publication <data-insights-publication>`__
+  Dataset: a deep dive <dataset_info> 
+  Metadata, MetaCatalog & Catalog Manager <metacatalog>
+  Conventions & Ingestion pipeline <dataset_conventions>
+  Storage engines <storage>
+  Security & Permission <security_permission>
