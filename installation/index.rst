@@ -19,15 +19,19 @@ In case you have problems to download the Virtual Machine, or you want to run on
 .. toctree::
    :maxdepth: 1
 
-    Dataportal-public <../dataportal/dataportal-public>
-    Dataportal-private <../dataportal/dataportal-private>
+    CatalogManager <microsrv/core/catalog-manager>
+    IngestionManager <microsrv/core/ingestion-manager>
+    SecurityManager <microsrv/core/security-manager>
+    DatasetManager <microsrv/core/dataset-manager>
+    StorageManager <microsrv/core/storage-manager>
+    FrontendManager <microsrv/dataportal/frontend-manager>
+    Dataportal-public <dataportal/dataportal-public>
+    Dataportal-private <dataportal/dataportal-private>
+    Semantics <microsrv/semantic/index>
     FreeIpa Docker <docker/freeipa>
     LDAP Docker <docker/ldap>
     CKAN Docker <docker/ckan>
     Superset Docker <docker/superset>
     Metabase Docker <docker/metabase>
     JupyterHub Docker <docker/jupyter>
-..     CatalogManager <../microservices/catalog-manager>
-..     SecurityManager <../microservices/security-manager>
-..     FrontendManager <../microservices/frontend-manager>
 
