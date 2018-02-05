@@ -29,7 +29,7 @@ L'idea è fornire alle Pubbliche Amministrazioni e alla community di utilizzator
 
 Nell'area privata è possibile [1]_:
 
-* Accedere al cruscotto utile alla registrazione di nuovi dataset. La procedura guidata facilita una completa metadatazione in conformità al profilo DCAT-AP_IT; i metadati sono arricchiti con informazioni sulla struttura del dato e relativa semantica [2]_.
+* Accedere al cruscotto utile alla `registrazione di nuovi dataset <dataportal/index>`__. La procedura guidata facilita una completa metadatazione in conformità al profilo DCAT-AP_IT; i metadati sono arricchiti con informazioni sulla struttura del dato e relativa semantica [2]_.
 
 * Creare e pubblicare Data Story, ovvero dei blog post in cui è possibile inserire nativamente risultati di analisi svolte con gli strumenti messi a disposizione dal DAF.
 
