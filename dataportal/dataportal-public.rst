@@ -28,30 +28,30 @@ Connection with DataStories:
 
 Installation Steps
 ------------------
-First of all, clone the following github repository:
+First of all, clone the DAF github repository(if you haven't already done):
 
 .. code-block:: bash
 
- > $ git clone https://github.com/italia/daf-dataportal-backend
+ > $ git clone https://github.com/italia/daf
   
-Start in Debug Mode:
+Then publish a local snapshot as follows:
 
 .. code-block:: bash
 
-  > npm install
-  > npm start 
-
-Start with mock server:
-
-.. code-block:: bash
-
-  > npm run mock
-
-Start in Production Mode:
+  > cd daf
+  > cd common
+  > sbt publish-local
+  > cd ..
+ 
+  
+clone the this dataportal-backend repository:
 
 .. code-block:: bash
 
-  > npm run build
-  > npm install -g serve
-  > serve -s build
+   > $ git clone https://github.com/italia/daf-dataportal-backend
+   > sbt compile
+   > sbt run
+   Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+   
+
 
