@@ -10,8 +10,8 @@ Several components are dependent to LDAP and/or FreeIPA. In this case, we offer 
 
 The best way to have everything installed and properly configured is to use the Virtual Machine you can download at the following url: 
 
-OVA Image: https://drive.google.com/file/d/0Bzp1CVf8pK-yQWtSb1RKanBWNm8/view
-Info: :download:`pdf <files/dockerVM.pdf>` 
+| OVA Image: `link download <https://drive.google.com/open?id=1d4nUTinunAARhMsozg9YV-3b0mtwVF1h>`_
+| Info: `guide <files/dockerVM.rst>`_
 
 
 In case you have problems to download the Virtual Machine, or you want to run only few components, please follow the component installation guide you find at the links below.
