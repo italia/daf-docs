@@ -46,7 +46,7 @@ Per fare ciò è sufficiente copiare e incollare i seguenti comandi nel primo qu
 .. code-block:: none
 
  %load_ext sparkmagic.magics
-  %manage_spark
+ %manage_spark
 
 L'esecuzione dei comandi produrrà l'apertura di un pannello come mostrato in figura:
 
