@@ -4,7 +4,7 @@ Installation Guide
 
 This section provides installation information for all DAF components, except for the Big Data Platform. Based on your development needs, you will be able to install separately only the components you require for your task. Almost every component has dependencies to other components, this will be documented in the installation guide of each component.
 
-In general, components developed internally are available via github repositories, meanwhile external ones have been dockerized with all needed dependencies and configurations. 
+In general, components developed internally are available via github repositories, meanwhile external ones have been dockerized with all needed dependencies and configurations.
 
 Several components are dependent to LDAP and/or FreeIPA. In this case, we offer you three alternatives: a dockerized LDAP, a remote FreeIPA test server, or a dockerized FreeIPA (working with Linux only at the moment). All of them will have test accounts already created for you.
 
@@ -16,7 +16,7 @@ See the Local Installation guide to know how to configure the Virtual Machine or
 .. toctree::
    :maxdepth: 1
 
-    Local Installation <local/dockerVM>
+    Local Installation <local/devVM>
     CatalogManager <microsrv/core/catalog-manager>
     IngestionManager <microsrv/core/ingestion-manager>
     SecurityManager <microsrv/core/security-manager>
@@ -32,4 +32,3 @@ See the Local Installation guide to know how to configure the Virtual Machine or
     Superset Docker <docker/superset>
     Metabase Docker <docker/metabase>
     JupyterHub Docker <docker/jupyter>
-
