@@ -1,7 +1,12 @@
-*********************
-Virtual Machine Guide
-*********************
+******************
+Local Installation
+******************
+
 This guide explaines how to use the virtual machine to create test enviroment.
+
+You can download the OVA image at the following link:
+
+OVA Image: `download <https://drive.google.com/open?id=1d4nUTinunAARhMsozg9YV-3b0mtwVF1h>`_
 
 =======================
 Virtual Machine Account
@@ -39,8 +44,13 @@ Configuration
 ===============
 Add in your PC file hosts the following lines:
 
-| xxx.xxx.xxx.xxx ipa.example.test superset.daf.test.it metabase.daf.test.it ckan.daf.test.it mongodb ckan metabase supersetd
-| 127.0.0.1 datipubblici-private.daf.test.it
+.. code-block:: bash
+
+ x.x.x.x ipa.example.test superset.daf.test.it metabase.daf.test.it ckan.daf.test.it mongodb ckan metabase supersetd
+ 127.0.0.1 datipubblici-private.daf.test.it
+
+When x.x.x.x is the Virtual Machine IP address
+
 
 Access Docker Services
 ----------------------
@@ -48,8 +58,9 @@ When Virtual Machine is in run you can access to the docker services from your b
 
 FreeIPA
 ^^^^^^^^^
-| Use the following link https://ipa.example.test to access to freeIPA.
-| The credentials are:
+Use the following link https://ipa.example.test to access to freeIPA.
+
+The credentials are:
 
  :USER: admin
  :PASSWORD: adminpassword
@@ -72,8 +83,9 @@ Actual users:
 
 CKAN
 ^^^^^^^^^^
-| Use the following link http://ckan:5000 to access the ckan in the Virtual Machine.
-| Use only LDAP user to login
+Use the following link http://ckan:5000 to access the ckan in the Virtual Machine.
+
+Use only LDAP user to login
 
 METABASE
 ^^^^^^^^
@@ -105,7 +117,7 @@ Edit file /etc/nsswitch.conf and comment the hosts row
  > # hosts: files mdns4_minimal [NOTFOUND=return] dns
 
 =========
-SERVICES
+Services
 =========
 Run in the host following command to clone daf project
 
@@ -122,7 +134,6 @@ In the case sbt is not found install it:
  > sudo apt-get update
  > sudo apt-getinstall sbt
 
-All services need vpn to be compiled
 
 Common
 -------
