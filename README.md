@@ -12,11 +12,11 @@ To run the server on you local machine you need have a working python interprete
 
 ```bash
 
-$ conda env create --name=daf-doc
+$ conda create --name=daf-doc
 
-$ source activate DAF-DOC
+$ source activate daf-doc
 
-$ conda install sphinx sphinx-autobuild
+$ pip install sphinx sphinx-autobuild
 ```
 
 ### Run the website locally
