@@ -6,7 +6,7 @@ This guide explaines how to use the virtual machine to create test enviroment.
 
 You can download the OVA image at the following link:
 
-OVA Image: `download <https://developers.italia.it/static/DAF-Ubuntu16-Docker-test.ova>`_
+OVA Image: `download <https://developers.italia.it/static/DAF-Ubuntu16-Docker-test.ova>`_ (8.6 GB)
 
 =======================
 Virtual Machine Account
