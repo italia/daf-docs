@@ -451,10 +451,10 @@ epub_exclude_files = ['search.html']
 # epub_use_index = True
 
 extlinks = {
-    'dafjupyter': ('http://jupyterhub.default.svc.cluster.local:8000', 'http://jupiter.daf.italia.it'),
+    'dafjupyter': ('https://datascience.daf.teamdigitale.it/', 'https://datascience.daf.teamdigitale.it'),
     'dataportal': ('http://dataportal.daf.teamdigitale.it', 'http://dataportal.daf.teamdigitale.it'),
     'dataportal-private': ('http://dataportal-private.daf.teamdigitale.it', 'https://dataportal-private.daf.teamdigitale.it'),
-    'superset': ('http://supersetd.default.svc.cluster.local:8088', 'http://superset.daf.italia.it'),
+    'dafsuperset': ('https://bi.daf.teamdigitale.it/', 'https://bi.daf.teamdigitale.it'),
     'dafpubblico': ('https://dataportal.daf.teamdigitale.it/', 'https://dataportal.daf.teamdigitale.it/'),
     'dafprivato': ('http://daf.italia.it/dataplatform', 'http://daf.italia.it/dataplatform'),
     'example': ('http://url.it/%s', 'Shown URL')
