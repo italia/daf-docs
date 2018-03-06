@@ -72,6 +72,10 @@ or
 
 The account ldap is used for bind docker system, every user in ldap has the same user and password.
 
+If you are using Google Chrome do not use the modal login on your browser, because it doesn't work.
+
+Use the login in the web page.
+
 Actual users:
 
  - raffaele
@@ -85,11 +89,11 @@ CKAN
 ^^^^^^^^^^
 Use the following link http://ckan:5000 to access the ckan in the Virtual Machine.
 
-Use only LDAP user to login
+Use only LDAP user to login.
 
 METABASE
 ^^^^^^^^
-Use the following link http://metabase:3000 to access the metabase in the Virtual Machines
+Use the following link http://metabase:3000 to access the metabase in the Virtual Machine.
 
  :USER/MAIL: admin@adim.it
  :PASSWORD: admin01
@@ -98,7 +102,12 @@ or login with LDAP users.
 
 SUPERSET
 ^^^^^^^^
-Login only with LDAP users
+
+Use the following link http://supersetd:8088 to access the superset in the Virtual Machine.
+
+ :USERNAME: superadmin
+ :PASSWORD: password1
+
 
 Use alternative DNS in VPN
 --------------------------
