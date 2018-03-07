@@ -12,7 +12,7 @@ Per approfondimenti sulle funzionalità e sulle modalità d'uso di Superset, si 
 Configurazione e aggiunta  di un dataset
 ========================================
 Un utente può accedere alla homepage di Superset direttamente dal Dataportal e utilizzarlo per creare datastories e dashboard che integrano le analisi realizzate.
-Nel menù laterale sinistro della sezione privata del Dataportal è infatti presente un pulsante 'Business Intelligence' (:superset:`/`) che abilita l'accesso a Superset.
+Nel menù laterale sinistro della sezione privata del Dataportal è infatti presente un pulsante `Business Intelligence <https://bi.daf.teamdigitale.it/>`_ che abilita l'accesso a Superset.
 Una volta entrati in Superset, si accede alla lista delle dashboard create nell'ambito dell'organizzazione a cui afferisce l'utente che ha effettuato l'accesso.
 Superset adotta infatti un approccio self-service: questo significa che ciascun utente, da un lato, potrà provvedere alla creazione delle nuove tabelle utili alle analisi, dei grafici e delle dashboard; dall'altro potrà riutilizzare le tabelle, i grafici e le dashboard creati dalla community.
 Chiaramente quest'ultima possibilità impone anche una certa disciplina nell'uso dello strumento, per evitare di interferire con le analisi fatte dagli altri utenti dell'organizzazione.

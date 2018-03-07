@@ -281,3 +281,78 @@ texinfo_documents = [
 
 numfig = True
 
+# The language of the text. It defaults to the language option
+# or 'en' if the language is not set.
+#
+# epub_language = ''
+
+# The scheme of the identifier. Typical schemes are ISBN or URL.
+# epub_scheme = ''
+
+# The unique identifier of the text. This can be a ISBN number
+# or the project homepage.
+#
+# epub_identifier = ''
+
+# A unique identification for the text.
+#
+# epub_uid = ''
+
+# A tuple containing the cover image and cover page html template filenames.
+#
+# epub_cover = ()
+
+# A sequence of (type, uri, title) tuples for the guide element of content.opf.
+#
+# epub_guide = ()
+
+# HTML files that should be inserted before the pages created by sphinx.
+# The format is a list of tuples containing the path and title.
+#
+# epub_pre_files = []
+
+# HTML files that should be inserted after the pages created by sphinx.
+# The format is a list of tuples containing the path and title.
+#
+# epub_post_files = []
+
+# A list of files that should not be packed into the epub file.
+epub_exclude_files = ['search.html']
+
+# The depth of the table of contents in toc.ncx.
+#
+# epub_tocdepth = 3
+
+# Allow duplicate toc entries.
+#
+# epub_tocdup = True
+
+# Choose between 'default' and 'includehidden'.
+#
+# epub_tocscope = 'default'
+
+# Fix unsupported image types using the Pillow.
+#
+# epub_fix_images = False
+
+# Scale large images.
+#
+# epub_max_image_width = 0
+
+# How to display URL addresses: 'footnote', 'no', or 'inline'.
+#
+# epub_show_urls = 'inline'
+
+# If false, no index is generated.
+#
+# epub_use_index = True
+
+extlinks = {
+    'dafjupyter': ('https://datascience.daf.teamdigitale.it/', 'https://datascience.daf.teamdigitale.it'),
+    'dataportal': ('http://dataportal.daf.teamdigitale.it', 'http://dataportal.daf.teamdigitale.it'),
+    'dataportal-private': ('http://dataportal-private.daf.teamdigitale.it', 'https://dataportal-private.daf.teamdigitale.it'),
+    'dafsuperset': ('https://bi.daf.teamdigitale.it/', 'https://bi.daf.teamdigitale.it'),
+    'dafpubblico': ('https://dataportal.daf.teamdigitale.it/', 'https://dataportal.daf.teamdigitale.it/'),
+    'dafprivato': ('http://daf.italia.it/dataplatform', 'http://daf.italia.it/dataplatform'),
+    'example': ('http://url.it/%s', 'Shown URL')
+}
