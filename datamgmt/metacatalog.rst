@@ -36,9 +36,9 @@ Data structure level metadata
 Data scructure metadata contains information about the internal structure of a dataset, at column or field level. It manages info about format, content, semantics that are contained into a single column of a tabular dataset, for example. Here we store two datastructure metadata: an avro schema of the dataset, and a 'flatschema' where we store additional information than the one provided by the avro schema, specifically thought to enrich the information expressed about the content and the semantics of the columns. Below, you'll find the list of info contained in the 'flatschema' part, we'll skip the avro schema part as are using the standard avro schema definition.
 
 * ``name``: name of the field/column. This name needs to obey to formatting rules that are necessary for it to be used as the name of a column in a database, therefore it may not be human readable.
-* ``title``: [TBA] human readable name for the column.
 * ``type``: data format of the column, such as 'string'.
-* ``desc``: description of the content of the column.
+* ``metadata.title``: human readable name for the column.
+* ``metadata.desc``: description of the content of the column.
 * ``metadata.field_type``: it tells if the column is a dimension, a metric (numeric attribute) or a descriptive attribute.
 * ``metadata.required``: it tells if the field is mandatory or optional.
 * ``metadata.cat``: category that can better represent the content of the field. This is controlled by a vocabulary.
@@ -68,6 +68,7 @@ Operational level metadata
 
 These metadata are used to manage the dataset within DAF logics and conventions, from input sources to storage options to ingesiton pipelines mechanics.
 
+* ``inactive``: optional boolean, true if the dataset entry has been created as inactive (that is, no effects on the system has been created, e.g. no ingestion pipeline has been started for the dataset yet). 
 * ``group_access``: (name, role)
 * ``group_own``:...
 * ``input_src``: (url, srv_pull, srv_push, daf_dataset, sftp)
@@ -82,5 +83,9 @@ These metadata are used to manage the dataset within DAF logics and conventions,
 * ``georef``:..
 * ``read_type``: update vs timeseries
 * ``std_schema``
-* ``opendata``: object that contains the information needed to build an opendata version of the dataset accordingly to transformation rules.
-
+* ``opendata``: it is used to tell the system to create an open data version of the dataset. If valued, it will create a new derived dataset entry, precompiled with info taken from the original dataset, and put into 'inactive' state so it can be valued and confirmed by the user. It is an object with the following info:
+  * ``create_opendata``: boolean, valued as true if user wants to create a derived open data dataset.
+  * ``sql``: SQL query with the final data structure of the open data dataset.
+* ``service_layer``: it is used to put the dataset (or its transformation) into the service layer (Kudu?)
+  * ``transfer_mode``: it tells whether the dataset will be put as is in the service layer or it needs to be transformed via derived dataset. It takes two values: ``direct``, ``derived``.
+  * ``sql``: optional, used in case ``transfer_mode`` is valued at ``derived`` and user wants to specify ex-ante the transformation query.
