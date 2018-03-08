@@ -123,6 +123,7 @@ html_theme_options = {
     # This option can be used with docs-italia-theme to customise how the versions "badge" is shown:
     # 'False': default (alabaster) badge | 'True': custom (italia) badge
     'custom_versions_badge': 'True',
+    'collapse_navigation': 'True'
 }
 # -- ReadTheDoc requirements and local template generation---------------------
 
