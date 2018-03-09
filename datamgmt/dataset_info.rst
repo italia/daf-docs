@@ -14,7 +14,7 @@ Formally, we define a dataset
 Ordinary Dataset
 ----------------
 
-Every datasets that are ingested by an organization (PA) are treated as **ordinary dataset**. An ordinary dataset does not have a pre-defined structure it needs to follow, it is ingested as it come, besides the standardization, normalization and enrichment processes defined in the ingestion pipeline.
+Every datasets that are ingested by an organization (PA) are treated as **ordinary dataset**. An ordinary dataset does not have a pre-defined structure it needs to follow, it is ingested as it comes, besides the standardization, normalization and enrichment processes defined in the ingestion pipeline.
 
 It will have the following data structure:
 
