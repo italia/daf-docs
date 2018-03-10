@@ -14,7 +14,7 @@ Local Installation
 - sbt run
 - connect to http://localhost:9000
 
-You should see a swagger ui with all endpoints described.
+You should see a swagger UI with all endpoints described.
 
 To test the endpoints I suggest to use a tool similar to `Postman <https://www.getpostman.com/>`_
 
@@ -34,6 +34,6 @@ Endpoints
 There are two endpoints:
 
 - */kb/v1/ontologies*                 : provides a list of the available ontologies
-- */kb/v1/ontologies/properties/find* : enable searching by terms and language for properties which may be used for a simple annotation of dataset fields in the ingestion form (and later for standardization).
+- */kb/v1/ontologies/properties/find* : enables searching by terms and language for properties which may be used for a simple annotation of dataset fields in the ingestion form (and later for standardization).
 
-Detailed informations about the service can be found `here <https://github.com/italia/daf-semantics/tree/master/semantic_manager>`_
+Detailed information about the service can be found `here <https://github.com/italia/daf-semantics/tree/master/semantic_manager>`_.

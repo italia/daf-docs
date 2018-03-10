@@ -2,8 +2,8 @@
 Security Manager
 ================
 
-**Security Manager** is the microservices responsible to manage security of the web application and the REST API developed within DAF.
-Its APIs verifies user credential, produces JWT tokens needed to access DAF services and handles the SSO on the solutions integrated in the Data Portal.
+**Security Manager** is the microservice responsible to manage security of the web application and the REST API developed within DAF.
+Its APIs verifies user's credential, produces JWT tokens needed to access DAF services and handles the SSO on the solutions integrated in the Data Portal.
 
 Local Installation
 ------------------
@@ -16,8 +16,8 @@ Local Installation
 - run
 - connect to http://localhost:9000/security-manager
 
-You should see a swagger ui with all endpoints described.
-Nevertheless, the authorization is not required by the UI you should pass at least a Basic authorization token made by an equal username and password.
+You should see a swagger UI with all endpoints described.
+Nevertheless, the authorization is not required by the UI you should pass at least a Basic authorization token made by an equal user name and password.
 
 To test the endpoints we suggest to use a tool like `Postman <https://www.getpostman.com/>`_
 

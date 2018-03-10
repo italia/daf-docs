@@ -3,10 +3,10 @@ Frontend Manager
 ================
 
 
-What is?
-----------
+What is it?
+-------------
 
-The Frontend Manager is the layer that serves functionalities to the frontend web applications (Dataportal-public and Dataportal-private). It integrates external applications (e.g. CKAN) and exposes REST API to the web apps.
+The **Frontend Manager** is the layer that serves functionalities to the frontend web applications (Dataportal-public and Dataportal-private). It integrates external applications (e.g. CKAN) and exposes REST API to the web apps.
 
 It has been developed using the following technologies:
 

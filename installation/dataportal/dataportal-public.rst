@@ -3,10 +3,10 @@ Dataportal-public
 *****************
 
 ===========
-What it is?
+What is it?
 ===========
 
-The Dataportal-public [put link]  is the webapp to access the open data catalog and other content that can be exposed publicly
+The `Dataportal-public <https://dataportal.daf.teamdigitale.it/>`__ is the web app to access the open data catalog and other content that can be exposed publicly.
 
 
 =======
@@ -29,7 +29,7 @@ Connection with DataStories:
 
 Installation Steps
 ------------------
-First of all, clone the following github repository:
+First of all, clone the following GitHub repository:
 
 .. code-block:: bash
 

@@ -3,7 +3,7 @@ Semantic Validator
 ============================================================
 
 **Semantic Validator** is the microservice designed to provide a simple way for validating RDF metadata dataset against a specific Ontology on an underlying triplestore.
-The validator is currently based on a set of queries (about 150 for DCAT-AP_IT) returning a record of information for the rules broken by the dataset, the most important infos are:
+The validator is currently based on a set of queries (about 150 for DCAT-AP_IT) returning a record of information for the rules broken by the dataset. The most important infos are:
 
   - Class name: the class involved in the rule (ex: Organization for DCAT-AP_IT)
   - Rule ID: the broken rule id (ex: 207 for DCAT-AP_IT)
@@ -18,9 +18,9 @@ Local Installation
 - sbt run
 - connect to http://localhost:9000
 
-You should see a swagger ui with all endpoints described.
+You should see a swagger UI with all endpoints described.
 
-To test the endpoints I suggest to use a tool similar to `Postman <https://www.getpostman.com/>`_
+To test the endpoints I suggest to use a tool similar to `Postman <https://www.getpostman.com/>`_.
 
 DAF integration note
 --------------------
@@ -33,6 +33,6 @@ Endpoints
 There are two endpoints:
 
 - */validator/validate*   : in order to validate a document
-- */validator/validators* : in oder to ghe the list of available validators
+- */validator/validators* : in oder to the list of available validators
 
-Detailed informations about the service can be found `here <https://github.com/italia/daf-semantics/tree/master/semantic_validator>`_
+Detailed information about the service can be found `here <https://github.com/italia/daf-semantics/tree/master/semantic_validator>`_.
