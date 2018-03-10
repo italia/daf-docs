@@ -1,7 +1,7 @@
 Metadata & Schemas
 ====================================
 
-`Dataset <../dataset/>`__ is the main concept of DAF. There exist two types of datasets each having different required sets of rules and information, more stringent for the *standard* datasets, less for *ordinary* datasets.
+`Dataset <../dataset/>`__ is the main concept of DAF. Two types of datasets exist, each having different required sets of rules and information, more stringent for *standard* datasets, less for *ordinary* datasets.
 
 Several *metadata* can be used to describe a dataset. Some metadata are
 useful to implement search/discovery mechanisms, others provide
@@ -11,7 +11,7 @@ Generally speaking, metadata are categorized in three macro groups:
 
 -  **DCAT-AP(_IT)**: this kind of metadata defines a standard way to specify descriptive information of the datasets. It defines metadata about theme, geographic location, who
    produced the dataset, who is responsible of the dataset, title and description of the dataset, and so on. DCAT-AP_IT is the Italian extension of the European metadata profile DCAT-AP `Data Catalogue Application
-   Profile <https://joinup.ec.europa.eu/asset/dcat_application_profile/description>`__. You can find the metadata schema DCAT-AP(_IT) in json `here <https://github.com/lilloraffa/daf-project/blob/master/datamgmt/metadata/md-dcatapit.json>`__ and `an example application; <https://github.com/lilloraffa/daf-project/blob/master/datamgmt/metadata/example/data-dcatapit.json>`__
+   Profile <https://joinup.ec.europa.eu/asset/dcat_application_profile/description>`__. You can find the metadata schema DCAT-AP(_IT) in JSON `here <https://github.com/lilloraffa/daf-project/blob/master/datamgmt/metadata/md-dcatapit.json>`__ and `an example application; <https://github.com/lilloraffa/daf-project/blob/master/datamgmt/metadata/example/data-dcatapit.json>`__
 -  **DataSchema**: this type of metadata involves the data content. This metadata is about features and the associated
    type, optional constraints on the values that the features can take,
    as well as semantic information, optional theme and categories of
@@ -43,7 +43,7 @@ Thus, the standard schema includes the following information:
 -  the list of required fields, with information, among the other, about their format, constraints if any, nature (e.g. measure or a dimension), domain specific information that will help the programmatic use of the data in specific contexts;
 -  the list of optional fields, with the same information listed for the required ones;
 -  the associated DCAT-AP(_IT) metadata id;
--  information about where the data set is stored and how.
+-  information about where the data set is stored and how;
 -  information about the owner of the data and the group (list of users) that has the rights to access the data.
 
 ... You can find the metadata of the `standard schema

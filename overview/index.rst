@@ -1,7 +1,7 @@
 Overview
 ========
 
-The DAF is an open source project meant to manage the data of Public Administration of a country.
+The DAF is an open source project meant to manage the data of a country's Public Administration.
 
 Consequently, it is designed to:
 
@@ -33,9 +33,9 @@ The following image provides an architectural snapshot of the DAF architecture:
 In a few words, the DAF platform integrates:
 
 * front-end applications (dataportal-public and dataportal-private);
-* front-end open source platforms, developed by third-parties (e.g. Metabase, Superset, Jupiter, CKAN);
-* back-end open source big data platforms and technologies (e.g. Hadoop ecosystem, Livy, Nifi, etc.)
-* microservices to manage all underlying DAF mechanisms (e.g. Catalog Manager, Ingestion Manager, etc.)
+* front-end open source platforms, developed by third-parties (e.g. Metabase, Superset, Jupyter, CKAN);
+* back-end open source big data platforms and technologies (e.g. Hadoop ecosystem, Livy, Nifi, etc.);
+* microservices to manage all underlying DAF mechanisms (e.g. Catalog Manager, Ingestion Manager, etc.).
 
 Everything is deployed on a Kubernetes cluster and relies on a Cloudera cluster.
 
