@@ -6,7 +6,7 @@ Docker
 -----------------
 FreeIPA server can be run in a Docker container for testing or demo purposes. It makes it possible to run all the processes comprising the server in an isolated way, leaving the host free to run other software, not clashing with the FreeIPA server.
 
-This install is done on Ubuntu 16.04. FreeIPA is focused on Linux (and other standards compliant) systems. FreeIPA is focused on Linux (and other standards compliant) systems. Therefore, in our knowledge, you cannot run a container of a FreeIPA server on **Mac** or **Windows**. However, any help in this direction is very welcomed!!
+This installation is done on Ubuntu 16.04. FreeIPA is focused on Linux (and other standards compliant) systems. Therefore, in our knowledge, you cannot run a container of a FreeIPA server on **Mac OS** or **Windows**. However, any help in this direction is very welcomed!!
 
 
 Follow these steps to run our FreeIPA server docker:
@@ -17,7 +17,7 @@ Follow these steps to run our FreeIPA server docker:
 
    > mkdir /var/lib/ipa-data
 
-2. Edit */etc/hosts* and ensure that the IPA server address is listed. This is required for Apache to work properly. You have to change IPA_SERVER_IP with the ipa server ip:
+2. Edit */etc/hosts* and ensure that the IPA server address is listed. This is required for Apache to work properly. You have to change IPA_SERVER_IP with the IPA server IP:
 
 .. code-block:: bash
 
@@ -49,16 +49,18 @@ Answer to the question:
 
         Continue to configure the system with these values? [no]:  --> type "y" and press "Enter"
 
-Wait some time until freeipa server is completely configured and started.
-The server is ready when on the shell appear the following message:
+Wait some time until FreeIPA server is completely configured and started.
+The server is ready when on the shell the following message appears:
 
 .. code-block:: bash
 
        > FreeIPA server configured.
 
-NOTE: Only first time that build image and run docker you need to ask to previous questions.
 
-- You can connect to Freeip Server with web interface:
+.. note::
+   You need to answer the previous questions only the first time you build the image and run docker.
+
+- You can connect to FreeIPA Server from a web interface:
 
         https://IPA_SERVER_IP:443
 
@@ -66,9 +68,9 @@ NOTE: Only first time that build image and run docker you need to ask to previou
 
         PW: adminpassword
 
-- You can also connect with LDAP client with Server IP address IPA_SERVER_IP
+- You can also connect with an LDAP client with Server IP address IPA_SERVER_IP
 
-- The container can the be started and stopped with the following commands:
+- The container can then be started and stopped with the following commands:
 
 .. code-block:: bash
 
