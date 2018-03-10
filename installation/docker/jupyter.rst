@@ -3,25 +3,25 @@ Jupyter
 ============================================================
 
 This guide will show you how to use Docker Compose to set up and run a `JupyterHub <https://jupyterhub.readthedocs.io/en/latest/>`_  instance
-which uses ldap credentials to authenticate users.
+which uses LDAP credentials to authenticate users.
 
 
 Account Management Dependency
---------------------------
+-------------------------------
 
-This configuration of Ckan needs an account management system to work with. We provide three different options, you will find more info on their respective sections:
+This configuration of CKAN needs an account management system to work with. We provide three different options, you will find more info on their respective sections:
 
 * Local LDAP Docker
-* Local FreeIPA Docker (works only with linux)
+* Local FreeIPA Docker (works only with Linux)
 * Remote FreeIpa Server
 
 
 JupyterHub
 -----------------
 
-This docker container runs a JupyterHub instance which is connected with a postgresql database.
+This Docker Container runs a JupyterHub instance which is connected with a PostgreSQL database.
 
-Run the docker container:
+Run the Docker Container:
 
 .. code-block:: bash
 
@@ -41,4 +41,8 @@ Check whether dockers are running:
 To open the interactive shell type *http://localhost:8000* and login as user *alice* (password *password*).
 
 .. image:: imgs/jupyter.png
+   :scale: 50 %
+   :alt: JupyterHub login page
+   :align: center
+   
    
