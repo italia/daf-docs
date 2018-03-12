@@ -6,7 +6,7 @@ Dataportal-public
 What is it?
 ===========
 
-The `Dataportal-public <https://dataportal.daf.teamdigitale.it/>`__ is the web app to access the open data catalog and other content that can be exposed publicly.
+The `Dataportal-public <https://dataportal.daf.teamdigitale.it/>`__ is the web app that allows access to the open data catalog and other content that can be exposed publicly.
 
 
 =======
@@ -24,7 +24,7 @@ Features Enabling Dependencies
 ------------------------------
 Connection with DataStories:
 
-* daf-dataportal-backend [put link to documentation]
+* `daf-dataportal-backend <../local/devVM.html#dataportal>`__
 
 
 Installation Steps

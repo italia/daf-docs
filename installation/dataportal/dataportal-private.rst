@@ -6,7 +6,7 @@ Dataportal-private
 What is it?
 ===========
 
-The `Dataportal-private <https://dataportal-private.daf.teamdigitale.it>`__ is the web app to access the functionalities of DAF, like:
+The `Dataportal-private <https://dataportal-private.daf.teamdigitale.it>`__ is the web app that allows access to the functionalities of DAF, like:
 
 * **Ingestion** form to add dataset with metadata
 * **Business Intelligence** with Superset (AirBnB)
@@ -23,7 +23,7 @@ Before proceeding with the installation steps, you need to install and run the f
 
 Basic Dependencies
 ------------------
-* `daf-dataportal-backend <dataportal-public.html>`__
+* `daf-dataportal-backend <../local/devVM.html#dataportal>`__
 * `FreeIPA <../docker/freeipa.html>`__
 * `CatalogManager <../microsrv/core/catalog-manager.html>`__
 * `SecurityManager <../microsrv/core/security-manager.html>`__
