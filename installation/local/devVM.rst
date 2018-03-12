@@ -62,7 +62,7 @@ When the Virtual Machine is running, you can access to the docker services from 
 
 FreeIPA
 ^^^^^^^^^
-Use the following link https://ipa.example.test to access to freeIPA.
+Use the following link https://ipa.example.test to access to FreeIPA.
 
 The credentials are:
 
@@ -74,7 +74,7 @@ or
  :USER: ldap
  :PASSWORD: ldap
 
-The account LDAP is used to bind docker system. Every user in LDAP has the same user name and password.
+The user :code:`ldap` is used to bind docker system. Every user in :code:`ldap` has the same user name and password.
 
 If you are using Google Chrome, do not use the modal login on your browser, because it doesn't work.
 
@@ -93,16 +93,16 @@ CKAN
 ^^^^^^^^^^
 Use the following link http://ckan:5000 to access the CKAN in the Virtual Machine.
 
-Use only LDAP user to login.
+Use only the user :code:`ldap` to login.
 
 METABASE
 ^^^^^^^^
-Use the following link http://metabase:3000 to access the metabase in the Virtual Machine.
+Use the following link http://metabase:3000 to access the metabase in the Virtual Machine, with credentials:
 
  :USER/MAIL: admin@admin.it
  :PASSWORD: admin01
 
-or login with LDAP users.
+or login with the user :code:`ldap`.
 
 SUPERSET
 ^^^^^^^^
@@ -223,7 +223,7 @@ In your .../package.json edit the line in the section scripts
 
 .. code-block:: bash
 
-  “start”: “PORT=80 react-scripts start”
+  "start": "PORT=80 react-scripts start"
 
 You can run the FE in the following modality:
 
@@ -242,7 +242,7 @@ Start in Production Mode:
   npm install -g serve
   serve -s build
 
-For each configuration, the application should be reached through the following url:
+For each configuration, the application should be reached through the following URL:
 
  http://datipubblici-private.daf.test.it
 
