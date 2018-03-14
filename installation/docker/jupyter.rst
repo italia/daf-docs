@@ -19,9 +19,9 @@ This configuration of CKAN needs an account management system to work with. We p
 JupyterHub
 -----------------
 
-This Docker Container runs a JupyterHub instance which is connected with a PostgreSQL database.
+This Docker container runs a JupyterHub instance which is connected with a PostgreSQL database.
 
-Run the Docker Container:
+Run the Docker container:
 
 .. code-block:: bash
 

@@ -5,7 +5,7 @@ CKAN
 CKAN is an open-source DMS (data management system) for powering data hubs and data portals.
 CKAN makes it easy to publish, share and use data. It powers datahub.io, catalog.data.gov and data.gov.uk, among many other sites.
 
-This guide will show you how to use Docker Compose to set up and run a `Ckan <https://ckan.org/>`_ instance which uses LDAP credentials to authenticate users. In particular, you can use an openLDAP docker container or a freeIpa instance.
+This guide will show you how to use Docker Compose to set up and run a `CKAN <https://ckan.org/>`_ instance which uses LDAP credentials to authenticate users. In particular, you can use an openLDAP Docker container or a FreeIpa instance.
 
 Account Management Dependency
 --------------------------
