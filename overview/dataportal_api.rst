@@ -16,7 +16,7 @@ Here are some basic content and features accessed and managed via the dataportal
 * **data applications**: software with a user interfaces that expose functionalities based on data and models trained on them. Data applications can be done by the DAF team, public administration or can be proposed by the community, and will be organized in a related section of the dataportal.
 * **news & blog**: blog post containing news related to the data world, together with how-to and tutorial on how to use the DAF and dataportal.
 * **Data visualization & Business Intelligence**: we integrated two open source tools, Metabase and Superset, where user can explore data managed by DAF and create graphs and dashboards.
-* **Data science**: a Jupyter Hub notebook as been integrated and connected to the Hadoop cluster to allow for data manipulation, analysis and data science. Users can take advantage of the capability of Apache Spark and its libraries to run SQL queries on top of Hadoop, integrate different datasets and traing machine learning model using MLlib library.
+* **Data science**: a Jupyter Hub notebook has been integrated and connected to the Hadoop cluster to allow for data manipulation, analysis and data science. Users can take advantage of the capability of Apache Spark and its libraries to run SQL queries on top of Hadoop, integrate different datasets and traing machine learning model using MLlib library.
 
 
 API

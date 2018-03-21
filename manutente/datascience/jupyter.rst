@@ -7,7 +7,7 @@ Introduzione
 ============
 
 `Jupyter Notebook <http://jupyter.org/>`_ è un'applicazione Web open-source che permette di creare e condividere documenti testuali interattivi, contenenti oggetti quali equazioni, grafici e codice sorgente eseguibile.
-Jupiter è diventato uno standard de-facto per data scientist perché offre la possibilità di realizzare, documentare e condividere analisi di dati all'interno di un framework che supporta [1]_:
+Jupyter è diventato uno standard de-facto per data scientist perché offre la possibilità di realizzare, documentare e condividere analisi di dati all'interno di un framework che supporta [1]_:
 
 * operazioni di *data cleaning & trasformation*, simulazioni numeriche, modellazione statistica, machine learning e altro;
 * l'esecuzione di applicazioni Scala e Python su piattaforme big data, grazie all'integrazione con Apache Spark.
@@ -22,7 +22,7 @@ In tal caso si consideri che le analisi locali possono essere realizzate, oltre 
 =========================================
 Creazione e configurazione di un notebook
 =========================================
-Per accedere alla console Jupiter del DAF collegarsi all'indirizzo :dafjupyter:`/`.
+Per accedere alla console Jupyter del DAF collegarsi `a questo indirizzo <https://datascience.daf.teamdigitale.it/>`_.
 Una volta effettuato il login con le credenziali fornite per il dataportal, si avrà accesso alla propria home nella quale è riportato l'elenco dei notebook associati all'utenza (al primo accesso l'elenco sarà vuoto).
 
 Per iniziare una nuova analisi è necessario creare un nuovo notebook scegliendo l'ambiente di sviluppo (*kernel*).
@@ -36,7 +36,7 @@ A tal fine cliccare sul pulsante 'new' in alto a destra e selezionare una delle 
 
 .. image:: img_jupyter/conf_choosekernel.jpeg
 
-Una volta effettuata la selezione, Jupiter provvederà a creare un notebook del tipo selezionato e a visualizzarlo in una nuova scheda del browser.
+Una volta effettuata la selezione, Jupyter provvederà a creare un notebook del tipo selezionato e a visualizzarlo in una nuova scheda del browser.
 
 La prima operazione da eseguire è la configurazione della connessione verso il cluster Spark del DAF.
 A tal fine è necessario configurare l'accesso al server `Livy <https://livy.incubator.apache.org>`_, specificando l'endpoint del server, il tipo di autenticazione e le credenziali di accesso [2]_.
@@ -46,7 +46,7 @@ Per fare ciò è sufficiente copiare e incollare i seguenti comandi nel primo qu
 .. code-block:: none
 
  %load_ext sparkmagic.magics
-  %manage_spark
+ %manage_spark
 
 L'esecuzione dei comandi produrrà l'apertura di un pannello come mostrato in figura:
 
@@ -131,5 +131,5 @@ Risorse utili
 
 **Note**
 
- .. [1] Per una panoramica completa sulle funzionalità offerte da Jupiter e per l'elenco completo dei linguaggi di programmazione da esso supportati, far rifererimento al `sito ufficiale <http://jupyter.org/>`_.
+ .. [1] Per una panoramica completa sulle funzionalità offerte da Jupyter e per l'elenco completo dei linguaggi di programmazione da esso supportati, far rifererimento al `sito ufficiale <http://jupyter.org/>`_.
  .. [2] Al momento l'autenticazione presso il server è necessaria ogni volta che si crea un nuovo notebook. Nelle prossime release del DAF, sarà fornito uno script che permetterà di effettuare questa operazione solo una volta.

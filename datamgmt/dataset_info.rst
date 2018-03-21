@@ -2,7 +2,7 @@ More on Datasets: A Deep dive
 =============================
 
 The notion of datasets is the main concept around which DAF architecture has been build. In fact, DAF provides advanced features for data governance, analysis and interoperability designed to solve typical problems faced by the public administrations and large companies.
-In this section we expand on what has been presented in the Overview section, to better describe how datasets are managed in DAF. What will follows is common to all datasets managed in DAF, except for some aspects related to data streams, that will be covered into an ad-hoc section.
+In this section we expand on what has been presented in the Overview section, to better describe how datasets are managed in DAF. What will follow is common to all datasets managed in DAF, except for some aspects related to data streams, that will be covered into an ad-hoc section.
 
 Formally, we define a dataset
   *as a combination of data and metadata.*
@@ -14,7 +14,7 @@ Formally, we define a dataset
 Ordinary Dataset
 ----------------
 
-Every datasets that are ingested by an organization (PA) are treated as **ordinary dataset**. An ordinary dataset does not have a pre-defined structure it needs to follow, it is ingested as it come, besides the standardization, normalization and enrichment processes defined in the ingestion pipeline.
+Every datasets that are ingested by an organization (PA) are treated as **ordinary dataset**. An ordinary dataset does not have a pre-defined structure it needs to follow, it is ingested as it comes, besides the standardization, normalization and enrichment processes defined in the ingestion pipeline.
 
 It will have the following data structure:
 
