@@ -86,7 +86,7 @@ Actual users:
  - alberto
 
 CKAN
-^^^^^^^^^^
+^^^^
 Use the following link http://ckan:5000 to access the ckan in the Virtual Machine.
 
 Use only LDAP user to login.
@@ -95,7 +95,7 @@ METABASE
 ^^^^^^^^
 Use the following link http://metabase:3000 to access the metabase in the Virtual Machine.
 
- :USER/MAIL: admin@adim.it
+ :USER/MAIL: admin@admin.it
  :PASSWORD: admin01
 
 or login with LDAP users.
@@ -109,25 +109,9 @@ Use the following link http://supersetd:8088 to access the superset in the Virtu
  :PASSWORD: password1
 
 
-Use alternative DNS in VPN
---------------------------
-Edit the openVPN client config file and add the following rows at the end:
-
-.. code-block:: bash
-
- > script-security 2
- > up /etc/openvpn/update-resolv-conf
- > down /etc/openvpn/update-resolv-conf
-
-Edit file /etc/nsswitch.conf and comment the hosts row
-
-.. code-block:: bash
-
- > # hosts: files mdns4_minimal [NOTFOUND=return] dns
-
-=========
+========
 Services
-=========
+========
 Run in the host following command to clone daf project
 
 .. code-block:: bash
@@ -145,7 +129,7 @@ In the case sbt is not found install it:
 
 
 Common
--------
+------
 Move on the host pc in the folder daf/common run commands:
 
 .. code-block:: bash
@@ -153,6 +137,7 @@ Move on the host pc in the folder daf/common run commands:
  > sbt
  > clean
  > compile
+ > publishLocal
 
 Security Manager
 ----------------
@@ -177,7 +162,7 @@ Move the host pc in the folder dat/catalog_manager and run commands:
  > run -Dconfig.resource=svil.conf -Dhttp.port=9001
 
 Dataportal
------------
+----------
 Clone the project daf-dataportal-backend from github using the following command:
 
 .. code-block:: bash
@@ -191,10 +176,10 @@ In your daf-dataportal-backend project run following commands:
  > sbt
  > clean
  > compile
- > run -Dconfig.resource=integration.conf
+ > run -Dconfig.resource=local.conf
 
 Front-end
-----------
+---------
 Clone the project  daf-dataportal from github:
 
 .. code-block:: bash
@@ -238,7 +223,11 @@ Start in Production Mode:
   npm install -g serve
   serve -s build
 
+
 For each configuration the application should be reached through the following url:
 
  http://datipubblici-private.daf.test.it
 
+At the first access you click on to the button "Registati" to sign up.
+After the registration access to freeIpa, search your account and add to your user groups "daf_admins"
+Now logout and login to DAF - Dataportal to see admin feature
