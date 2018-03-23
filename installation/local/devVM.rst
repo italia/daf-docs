@@ -2,11 +2,12 @@
 Local Installation
 ******************
 
-This guide explains how to use the Virtual Machine to create a test environment.
+This guide explains how to use the Virtual Machine to create a test environment. 
 
-You can download the OVA image at the following link:
+The procedure will soon be migrated to `Vagrant <http://www.vagrantup.com/>`_. 
+If you want, you can contribute with a pull request to the `upstream repository <http://github.com/italia/daf>`_.
 
-OVA Image: `download <https://developers.italia.it/static/DAF-Ubuntu16-Docker-test.ova>`_ (8.6 GB)
+You can download the OVA image at the following link: `download <https://developers.italia.it/static/DAF-Ubuntu16-Docker-test.ova>`_ (8.6 GB)
 
 .. warning::
 
