@@ -232,6 +232,6 @@ For each configuration, the application should be reached through the following 
 
  http://datipubblici-private.daf.test.it
 
-At the first access you click on to the button "Registati" to sign up.
-After the registration access to freeIpa, search your account and add to your user groups "daf_admins"
-Now logout and login to DAF - Dataportal to see admin feature
+When you access for the first time, click on the button "Registrati" to sign up.
+After the registration, access the FreeIpa, search for your account and add it to your user groups "daf_admins".
+Now, log out and log in again to DAF - Dataportal to see the admin features.
