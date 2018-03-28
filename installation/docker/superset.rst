@@ -17,9 +17,8 @@ Go to the superset directory:
 
  > cd superset
 
-The superset docker connects, by-default, to a test LDAP server provided by
-the DAF platform. If need to configure another LDAP server proper configure
-LDAP parameters inside the configuration file "superset_config.py":
+The Superset docker connects, by-default, to a test LDAP server provided by
+the DAF platform. If you need to configure another LDAP server, choose the proper configuration of the LDAP parameters inside the configuration file "superset_config.py":
 
  - AUTH_TYPE = AUTH_LDAP
  - AUTH_LDAP_SERVER = "ldaps://server:636"
@@ -33,17 +32,17 @@ LDAP parameters inside the configuration file "superset_config.py":
  - AUTH_LDAP_ALLOW_SELF_SIGNED = True
 
 
-Build superset image
+Build the Superset image:
 
 .. code-block:: bash
 
  > ./build.sh
  > docker-compose up -d
 
-It will start Superset, Postgres and Redis servers.
+This will start Superset, Postgres and Redis servers.
 Wait some time to be sure all processes are up and running.
 
-Run the init command to load into Superset some data for testing:
+Run the :code:`init` command to load into Superset some data for testing:
 
 .. code-block:: bash
 

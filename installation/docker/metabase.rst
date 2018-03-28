@@ -3,7 +3,7 @@ Metabase
 ============================================================
 
 .. Metabase + postgres + ldap configuration
-This guide explains how to run a execute a Metabase server.
+This guide explains how to run and execute a Metabase server.
 
 Follow these steps to run the Docker images.
 
@@ -13,7 +13,7 @@ Clone the git project:
 
  > git clone git@github.com:italia/daf-recipes.git
 
-Go to the metabase directory, the images needed by docker-compose and run it:
+Go to the :code:`metabase` directory, the images needed by docker-compose and run it:
 
 .. code-block:: bash
 
@@ -21,6 +21,6 @@ Go to the metabase directory, the images needed by docker-compose and run it:
  > ./build_local.sh
  > docker-compose up -d    # it will run all the needed containers
 
-Open the metabase home http://localhost:3000
+Open the Metabase home at http://localhost:3000.
 
-Go to `github <https://github.com/italia/daf-recipes/tree/master/metabase>`_ for seeing how to setup metabase.
+Go to `GitHub <https://github.com/italia/daf-recipes/tree/master/metabase>`_ to check how to set up Metabase.

@@ -3,7 +3,7 @@ OntoNetHub
 ============================================================
 
 **OntoNetHub** is a microservice meant to deal with the management of ontology networks.
-This include the upload, deletion, storage, and indexing of an ontology part of a network.
+This includes the upload, deletion, storage, and indexing of an ontology part of a network.
 
 OntoNetHub is designed as an extension of Apache Stanbol and released as a Docker component. Hence, users need Docker to build and run OntoNetHub.
 
@@ -22,7 +22,7 @@ To test the endpoints it's possible to use a tool similar to `Postman <https://w
 DAF integration note
 --------------------
 
-This microservice currently provides functionalities to the semantic_manager, which takes care of integrating them to DAF and the public dataportal:
+This microservice currently provides functionalities to the `Semantic Manager <semantic-manager.html>`__, which takes care of integrating them into the DAF and the public dataportal:
 
 - with the ingestion form of DAF, providing suggestions for the "semantic" annotations of dataset fields.
 - with the public dataportal, providing a list of available ontologies and "core" vocabularies.
@@ -41,4 +41,4 @@ There is a list of available endpoints:
 - */stanbol/ontonethub/ontologies/find*                : can be used for querying the OntoNetHub and retrieving OWL entities from the ontologies managed by it.
 
 
-Detailed informations about the service can be found `here <https://github.com/teamdigitale/ontonethub>`_
+Detailed information about the service can be found `here <https://github.com/teamdigitale/ontonethub>`_.

@@ -2,11 +2,16 @@
 Local Installation
 ******************
 
-This guide explaines how to use the virtual machine to create test enviroment.
+This guide explains how to use the Virtual Machine to create a test environment. 
 
-You can download the OVA image at the following link:
+The procedure will soon be migrated to `Vagrant <http://www.vagrantup.com/>`_. 
+If you want, you can contribute with a pull request to the `upstream repository <http://github.com/italia/daf>`_.
 
-OVA Image: `download <https://developers.italia.it/static/DAF-Ubuntu16-Docker-test.ova>`_ (8.6 GB)
+You can download the OVA image at the following link: `download <https://developers.italia.it/static/DAF-Ubuntu16-Docker-test.ova>`_ (8.6 GB)
+
+.. warning::
+
+   In order to use the Virtual Machine, you must have at least 20 Gb of free space in your hard drive. 
 
 =======================
 Virtual Machine Account
@@ -15,13 +20,13 @@ Virtual Machine Account
   :USER: user
   :PASSWORD: password
 
-CHECK Virtual Machine assigned ip address (also check bridge of virtual machines before start if you use wireless or eth adapter on your pc) using command
+Check the IP address assigned to the Virtual Machine (also check bridge of virtual machines before start if you use wireless or Ethernet adapter on your PC) using the command:
 
 .. code-block:: bash
 
  > ip a | grep enp0s3
 
-Access to Virtual Machine:
+Access the Virtual Machine via ssh:
 
 .. code-block:: bash
 
@@ -30,35 +35,35 @@ Access to Virtual Machine:
 ==============
 Docker image
 ==============
-In Virtual Machine to access folder with container docker image:
+In the Virtual Machine, to access a folder with container docker image:
 
 .. code-block:: bash
 
  > sudo -i
  > cd /root/docker
 
-All container starts automatically when Virtual Machine satrts.
+All the containers start automatically when the Virtual Machine starts.
 
 ===============
 Configuration
 ===============
-Add in your PC file hosts the following lines:
+In your PC Hosts file, add the following lines:
 
 .. code-block:: bash
 
  x.x.x.x ipa.example.test superset.daf.test.it metabase.daf.test.it ckan.daf.test.it mongodb ckan metabase supersetd
  127.0.0.1 datipubblici-private.daf.test.it
 
-When x.x.x.x is the Virtual Machine IP address
+where x.x.x.x is the Virtual Machine IP address.
 
 
 Access Docker Services
 ----------------------
-When Virtual Machine is in run you can access to the docker services from your browser.
+When the Virtual Machine is running, you can access to the docker services from your browser.
 
 FreeIPA
 ^^^^^^^^^
-Use the following link https://ipa.example.test to access to freeIPA.
+Use the following link https://ipa.example.test to access to FreeIPA.
 
 The credentials are:
 
@@ -70,9 +75,9 @@ or
  :USER: ldap
  :PASSWORD: ldap
 
-The account ldap is used for bind docker system, every user in ldap has the same user and password.
+The user :code:`ldap` is used to bind docker system. Every user in :code:`ldap` has the same user name and password.
 
-If you are using Google Chrome do not use the modal login on your browser, because it doesn't work.
+If you are using Google Chrome, do not use the modal login on your browser, because it doesn't work.
 
 Use the login in the web page.
 
@@ -86,19 +91,19 @@ Actual users:
  - alberto
 
 CKAN
-^^^^^^^^^^
-Use the following link http://ckan:5000 to access the ckan in the Virtual Machine.
+^^^^
+Use the following link http://ckan:5000 to access the CKAN in the Virtual Machine.
 
-Use only LDAP user to login.
+Use only the user :code:`ldap` to login.
 
 METABASE
 ^^^^^^^^
-Use the following link http://metabase:3000 to access the metabase in the Virtual Machine.
+Use the following link http://metabase:3000 to access the metabase in the Virtual Machine, with credentials:
 
- :USER/MAIL: admin@adim.it
+ :USER/MAIL: admin@admin.it
  :PASSWORD: admin01
 
-or login with LDAP users.
+or login with the user :code:`ldap`.
 
 SUPERSET
 ^^^^^^^^
@@ -109,32 +114,16 @@ Use the following link http://supersetd:8088 to access the superset in the Virtu
  :PASSWORD: password1
 
 
-Use alternative DNS in VPN
---------------------------
-Edit the openVPN client config file and add the following rows at the end:
-
-.. code-block:: bash
-
- > script-security 2
- > up /etc/openvpn/update-resolv-conf
- > down /etc/openvpn/update-resolv-conf
-
-Edit file /etc/nsswitch.conf and comment the hosts row
-
-.. code-block:: bash
-
- > # hosts: files mdns4_minimal [NOTFOUND=return] dns
-
-=========
+========
 Services
-=========
-Run in the host following command to clone daf project
+========
+In the host, run the following command to clone the DAF project:
 
 .. code-block:: bash
 
  > git clone https://github.com/italia/daf.git
 
-In the case sbt is not found install it:
+In case sbt is not found, install it:
 
 .. code-block:: bash
 
@@ -145,18 +134,19 @@ In the case sbt is not found install it:
 
 
 Common
--------
-Move on the host pc in the folder daf/common run commands:
+------
+On the host PC, go to the folder daf/common and run the following commands:
 
 .. code-block:: bash
 
  > sbt
  > clean
  > compile
+ > publishLocal
 
 Security Manager
 ----------------
-In your daf/security_manager folder run:
+In your daf/security_manager folder, run:
 
 .. code-block:: bash
 
@@ -167,7 +157,7 @@ In your daf/security_manager folder run:
 
 Catalog Manager
 ---------------
-Move the host pc in the folder dat/catalog_manager and run commands:
+On the host PC, go to the folder dat/catalog_manager and run the commands:
 
 .. code-block:: bash
 
@@ -177,25 +167,25 @@ Move the host pc in the folder dat/catalog_manager and run commands:
  > run -Dconfig.resource=svil.conf -Dhttp.port=9001
 
 Dataportal
------------
-Clone the project daf-dataportal-backend from github using the following command:
+----------
+Clone the project daf-dataportal-backend from GitHub using the following command:
 
 .. code-block:: bash
 
  > git clone  https://github.com/italia/daf-dataportal-backend
 
-In your daf-dataportal-backend project run following commands:
+In your daf-dataportal-backend project, run the following commands:
 
 .. code-block:: bash
 
  > sbt
  > clean
  > compile
- > run -Dconfig.resource=integration.conf
+ > run -Dconfig.resource=local.conf
 
 Front-end
-----------
-Clone the project  daf-dataportal from github:
+---------
+Clone the project daf-dataportal from GitHub:
 
 .. code-block:: bash
 
@@ -219,7 +209,7 @@ In your .../package.json edit the line in the section scripts
 
 .. code-block:: bash
 
-  “start”: “PORT=80 react-scripts start”
+  "start": "PORT=80 react-scripts start"
 
 You can run the FE in the following modality:
 
@@ -238,7 +228,11 @@ Start in Production Mode:
   npm install -g serve
   serve -s build
 
-For each configuration the application should be reached through the following url:
+
+For each configuration, the application should be reached through the following URL:
 
  http://datipubblici-private.daf.test.it
 
+When you access for the first time, click on the button "Registrati" to sign up.
+After the registration, access the FreeIpa, search for your account and add it to your user groups "daf_admins".
+Now, log out and log in again to DAF - Dataportal to see the admin features.

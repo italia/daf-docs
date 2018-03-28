@@ -3,15 +3,15 @@ Dataportal-private
 ******************
 
 ===========
-What it is?
+What is it?
 ===========
 
-The Dataportal-private [put link]  is the webapp to access functionalities of DAF, like:
+The `Dataportal-private <https://dataportal-private.daf.teamdigitale.it>`__ is the web app that allows access to the functionalities of DAF, like:
 
-* **Ingestion** Form to add dataset with metadata
+* **Ingestion** form to add dataset with metadata
 * **Business Intelligence** with Superset (AirBnB)
 * **Graphs** with Metabase
-* **Data Science** with Jupyter + Sparkmagic
+* **Data science** with Jupyter + Sparkmagic
 * Ontologies and Controlled Vocabularies repository
 
 
@@ -23,23 +23,24 @@ Before proceeding with the installation steps, you need to install and run the f
 
 Basic Dependencies
 ------------------
-* daf-dataportal-backend [put link to documentation]
-* FreeIPA [put link to documentation]
-* CatalogManager [put link to documentation]
-* SecurityManager [put link to documentation]
+* `daf-dataportal-backend <../local/devVM.html#dataportal>`__
+* `FreeIPA <../docker/freeipa.html>`__
+* `CatalogManager <../microsrv/core/catalog-manager.html>`__
+* `SecurityManager <../microsrv/core/security-manager.html>`__
+
 
 Features Enabling Dependencies
 ------------------------------
-* Superset [put link to docker documentation]
-* Metabase [put link to docker documentation]
-* JupyterHub [put link to docker documentation]
-* CKAN [put link to docker documentation]
+* `Superset <../docker/superset.html>`__
+* `Metabase <../docker/metabase.html>`__
+* `JupyterHub <../docker/jupyter.html>`__
+* `CKAN <../docker/ckan.html>`__
 
 
 
 Installation Steps
 ------------------
-First of all, you need to clone the following github repository:
+First of all, you need to clone the following GitHub repository:
 
 .. code-block:: bash
   
