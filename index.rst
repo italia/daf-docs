@@ -63,4 +63,3 @@ All contributions are welcome!
     Content Management <content/index>
     Architecture <architecture/index>
     Installation  <installation/index>
-    [ITA] Manuale utente <manutente/index>
